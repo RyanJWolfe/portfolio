@@ -1,5 +1,12 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+    .section {
+        @apply h-screen flex justify-center items-center snap-start
+    }
+}
+
 @tailwind utilities;
 
 /*
