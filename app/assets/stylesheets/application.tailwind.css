@@ -3,7 +3,7 @@
 
 @layer components {
     .section {
-        @apply h-screen flex justify-center items-center snap-start
+        @apply w-full h-screen flex justify-center items-center snap-start
     }
 }
 
