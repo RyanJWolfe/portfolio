@@ -5,10 +5,16 @@
         <i class="fab fa-wolf-pack-battalion fa-3x text-purple-400 hover:text-purple-200"></i>
       <% end %>
     </div>
-    <div class="flex items-center space-x-4 md:space-x-6">
-      <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about' } %>
-      <%= render 'layouts/nav/header', { label: '02.', title: 'What I do', route: '#what-i-do' } %>
-      <%= link_to 'Contact', '#contact', class: "btn-purple" %>
+    <div class="flex items-center space-x-2 md:space-x-6">
+      <%= render 'shared/transition_up_button', { route: '#about', classes: "nav-header pb-2" } do %>
+        <%= render 'layouts/nav/header', { label: '01.', title: 'About' } %>
+      <% end %>
+      <%= render 'shared/transition_up_button', { route: '#what-i-do', classes: "nav-header pb-2" } do %>
+        <%= render 'layouts/nav/header', { label: '02.', title: 'What I do' } %>
+      <% end %>
+      <%= render 'shared/transition_up_button', { route: '#contact', classes: "pb-1" } do %>
+        <span class="btn-purple">Contact</span>
+      <% end %>
     </div>
   </div>
 </div>
