@@ -13,9 +13,14 @@
   </head>
 
   <body data-controller="nav">
-    <%= render 'layouts/nav/navbar' %>
+    <header id="navbar"
+            class="top-0 fixed z-10 w-full"
+            style="transition: top 0.3s;"
+            data-nav-target="navbar">
+      <%= render 'layouts/nav/navbar' %>
+    </header>
     <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup"
-          class="w-full h-screen scroll-smooth snap-mandatory snap-y overflow-auto">
+          class="w-full h-screen bg-white dark:bg-slate-900 text-gray-900 dark:text-white scroll-smooth snap-mandatory snap-y overflow-auto">
       <%= yield %>
     </main>
   </body>
