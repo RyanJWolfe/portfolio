@@ -5,15 +5,18 @@
         <i class="fab fa-wolf-pack-battalion fa-3x text-purple-400 hover:text-purple-200"></i>
       <% end %>
     </div>
-    <div class="flex items-center space-x-2 md:space-x-6">
-      <%= render 'shared/transition_up_button', { route: '#about', classes: "nav-header pb-2" } do %>
-        <%= render 'layouts/nav/header', { label: '01.', title: 'About' } %>
+    <div class="flex items-center space-x-4 md:space-x-6">
+      <%= render 'shared/button_with_translate', { classes: "nav-header pb-2",
+                                                   translate: "hover:-translate-y-1" } do %>
+        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about', } %>
       <% end %>
-      <%= render 'shared/transition_up_button', { route: '#what-i-do', classes: "nav-header pb-2" } do %>
-        <%= render 'layouts/nav/header', { label: '02.', title: 'What I do' } %>
+      <%= render 'shared/button_with_translate', { classes: "nav-header pb-2",
+                                                   translate: "hover:-translate-y-1" } do %>
+        <%= render 'layouts/nav/header', { label: '02.', title: 'What I do', route: '#what-i-do' } %>
       <% end %>
-      <%= render 'shared/transition_up_button', { route: '#contact', classes: "pb-1" } do %>
-        <span class="btn-purple">Contact</span>
+      <%= render 'shared/button_with_translate', { classes: "pb-1",
+                                                   translate: "hover:-translate-y-1" } do %>
+        <%= link_to 'Contact', '#contact', class: "btn-purple"%>
       <% end %>
     </div>
   </div>

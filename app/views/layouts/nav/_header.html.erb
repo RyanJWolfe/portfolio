@@ -1,2 +1,6 @@
-<p class="text-purple-400 font-medium"><%= label %></p>
-<span class="nav-header"><%= title %></span>
+<%= link_to route do %>
+  <div class="flex space-x-1 text-sm">
+    <p class="text-purple-400 font-medium"><%= label %></p>
+    <span class="nav-header"><%= title %></span>
+  </div>
+<% end %>
