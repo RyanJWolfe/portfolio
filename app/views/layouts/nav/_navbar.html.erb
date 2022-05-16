@@ -1,13 +1,14 @@
-<div class="bg-white text-gray-900 dark:bg-slate-900 dark:text-white w-full px-4 md:px-10 py-2.5">
+<div class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white w-full px-6 md:px-12 py-5">
   <div class="flex justify-between items-center mx-auto">
-    <div class="flex">
-      <h1>Logo</h1>
+    <div class="flex items-center">
+      <%= link_to '#home' do %>
+        <i class="fab fa-wolf-pack-battalion fa-3x text-purple-400 hover:text-purple-200"></i>
+      <% end %>
     </div>
-    <div class="flex space-x-4 md:space-x-8">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#what-i-do">What I do</a>
-      <a href="#contact">Contact</a>
+    <div class="flex items-center space-x-4 md:space-x-6">
+      <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about' } %>
+      <%= render 'layouts/nav/header', { label: '02.', title: 'What I do', route: '#what-i-do' } %>
+      <%= link_to 'Contact', '#contact', class: "btn-purple" %>
     </div>
   </div>
 </div>

@@ -25,6 +25,6 @@ export default class extends Controller {
   }
 
   hideNavbar() {
-    this.navbarTarget.style.top = "-50px"
+    this.navbarTarget.style.top = "-100px"
   }
 }
