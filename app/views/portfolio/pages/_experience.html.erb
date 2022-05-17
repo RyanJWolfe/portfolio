@@ -1,37 +1,21 @@
-<div class="w-full flex-col space-y-6">
+<div class="w-full flex-col space-y-6 tracking-wide">
   <%= render 'portfolio/pages/section_header', { label: "02", title: "What I Do"}%>
 
   <div class="bg-gray-800 py-6 md:py-12 grid grid-cols-3 rounded-xl shadow-md">
-    <div class="flex flex-col items-center space-y-8 border-r border-gray-500 px-6">
-      <div class="flex flex-col items-center space-y-8">
-        <i class="fas fa-pencil-ruler fa-4x text-purple-400"></i>
-        <h2 class="font-bold text-2xl">Designer</h2>
-        <p class="text-center text-gray-400">
-          I value simple content structure, clean design patterns, and thoughtful solutions.
-        </p>
-      </div>
+
+    <div class="grid-column border-r border-gray-500">
+      <%= render 'portfolio/pages/experience/architect' %>
     </div>
 
 
-    <div class="flex flex-col items-center space-y-8 border-r border-gray-500 px-6">
-      <div class="flex flex-col items-center space-y-8">
-        <i class="fas fa-code fa-4x text-purple-400"></i>
-        <h2 class="font-bold text-2xl">Full-stack Developer</h2>
-        <p class="text-center text-gray-400">
-          I like to code things, and I enjoy bringing ideas to life on the web.
-        </p>
-      </div>
+    <div class="grid-column border-r border-gray-500">
+      <%= render 'portfolio/pages/experience/developer' %>
     </div>
 
-    <div class="flex flex-col items-center space-y-8 px-6">
-      <div class="flex flex-col items-center space-y-8">
-        <i class="fas fa-user-tie fa-4x text-purple-400"></i>
-        <h2 class="font-bold text-2xl">Professional</h2>
-        <div class="text-center text-gray-400">
-          I understand what it takes to have a good software development process.
-        </div>
-      </div>
+    <div class="grid-column">
+      <%= render 'portfolio/pages/release_it' %>
     </div>
+
   </div>
 </div>
 

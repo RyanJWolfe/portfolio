@@ -13,6 +13,14 @@
     .btn-purple {
         @apply inline-flex items-center justify-center border border-purple-400 px-3 py-1.5 text-sm font-medium text-purple-400 rounded hover:bg-gray-800 hover:text-purple-200 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800
     }
+
+    .grid-column {
+        @apply flex flex-col items-center space-y-10 px-8 text-center
+    }
+
+    .text-link {
+        @apply underline
+    }
 }
 
 @tailwind utilities;
