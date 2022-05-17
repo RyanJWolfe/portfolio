@@ -1,11 +1,11 @@
-<div class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white w-full px-6 md:px-12 py-5">
+<div class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white w-full px-6 md:px-12 xl:px-16 pt-6 md:pt-10 pb-2">
   <div class="flex justify-between items-center mx-auto">
     <div class="flex items-center">
       <%= link_to '#home' do %>
-        <i class="fab fa-wolf-pack-battalion fa-3x text-purple-400 hover:text-purple-200"></i>
+        <i class="fab fa-wolf-pack-battalion fa-5x text-purple-400 hover:text-purple-200"></i>
       <% end %>
     </div>
-    <div class="flex items-center space-x-4 md:space-x-6">
+    <div class="flex items-center space-x-4 md:space-x-8 text-lg">
       <%= render 'shared/button_with_translate', { classes: "nav-header",
                                                    translate: "hover:-translate-y-1" } do %>
         <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about', } %>
@@ -20,7 +20,7 @@
       <% end %>
       <%= render 'shared/button_with_translate', { classes: "",
                                                    translate: "hover:-translate-y-1" } do %>
-        <%= link_to 'Contact', '#contact', class: "btn-purple"%>
+        <%= link_to 'Contact', '#contact', class: "btn-purple px-6 py-3"%>
       <% end %>
     </div>
   </div>
