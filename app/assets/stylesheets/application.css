@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.btn-slide {
+.color-transition {
     transition: color .3s ease-in-out;
 }
 

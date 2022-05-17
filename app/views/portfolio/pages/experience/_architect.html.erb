@@ -8,8 +8,16 @@
 <div class="flex flex-col items-center space-y-4">
   <h3 class="text-purple-400 text-xl">Principles I follow</h3>
   <span class="text-gray-200 text-xl">
-    <%= render "shared/text_link", { text: "DRY", route: "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" } %>
-    <%= render "shared/text_link", { text: "TDD", route: "https://www.agilealliance.org/glossary/tdd" } %>
-    <%= render "shared/text_link", { text: "Self-documenting code", route: "https://itnext.io/tips-for-writing-self-documenting-code-e54a15e9de2" } %>
+    <%= render "shared/text_link", { text: "The Pragmatic Programmer", route: "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" } %>
   </span>
+</div>
+<div class="flex flex-col items-center space-y-4 text-xl">
+  <h3 class="text-purple-400">Design patterns</h3>
+  <%= render "shared/text_link", { text: "Don't repeat yourself (DRY)", route: "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" } %>
+  <%= render "shared/text_link", { text: "Test-driven development (TDD)", route: "https://www.agilealliance.org/glossary/tdd" } %>
+  <%= render "shared/text_link", { text: "Red, Green, Refactor", route: "https://www.codecademy.com/article/tdd-red-green-refactor" } %>
+  <span>Model-View-Controller (MVC)</span>
+  <span>Event-driven architecture (EDA)</span>
+  <%= render "shared/text_link", { text: "Self-documenting code", route: "https://itnext.io/tips-for-writing-self-documenting-code-e54a15e9de2" } %>
+  <span>Tiny functions</span>
 </div>
