@@ -1,18 +1,18 @@
 <div class="w-full flex-col space-y-6 tracking-wide">
   <%= render 'portfolio/pages/section_header', { label: "02", title: "What I Do"}%>
 
-  <div class="bg-gray-800 py-6 md:py-12 grid grid-cols-3 rounded-xl shadow-md">
+  <div class="bg-gray-800 grid grid-cols-3 rounded-xl shadow-md">
 
-    <div class="grid-column border-r border-gray-500">
+    <div class="grid-column border-l border-gray-500 rounded-xl">
       <%= render 'portfolio/pages/experience/architect' %>
     </div>
 
 
-    <div class="grid-column border-r border-gray-500">
+    <div class="grid-column border-x border-gray-500">
       <%= render 'portfolio/pages/experience/developer' %>
     </div>
 
-    <div class="grid-column">
+    <div class="grid-column border-r border-gray-500 rounded-xl">
       <%= render 'portfolio/pages/release_it' %>
     </div>
 
