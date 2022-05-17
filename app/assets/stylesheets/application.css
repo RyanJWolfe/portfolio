@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.btn-slide span:first-child{
+    transform: translateX(-101%);
+    transition: transform .3s ease-in
+}
+.btn-slide:hover span{
+    transform: translateX(0)
+}
