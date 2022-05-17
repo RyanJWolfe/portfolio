@@ -4,6 +4,26 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["navbar", "homeSection"]
 
+  connect() {
+    this.theme = null
+    this.toggleTheme()
+  }
+
+  toggleTheme() {
+    console.log("toggle theme")
+    console.log(this.theme)
+    if (this.theme === 'light' || (!this.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+      console.log("dark")
+      this.theme = 'dark'
+    } else {
+      document.documentElement.classList.remove('dark')
+      console.log("light")
+
+      this.theme = 'light'
+    }
+  }
+
   onKeyup(e) {
     if (e.key === "ArrowUp") {
       this.showNavbar()
