@@ -1,8 +1,21 @@
-<div class="w-full">
+<div class="w-full flex-col space-y-6">
   <%= render 'portfolio/pages/section_header', { label: "02", title: "What I Do"}%>
 
-  <div class="bg-gray-800 p-6 flex flex-col items-center rounded-lg shadow-md">
-    <i class="fas fa-pencil-ruler fa-4x text-purple-400"></i>
+  <div class="bg-gray-800 py-6 md:py-12 grid grid-cols-3 rounded-xl shadow-md">
+    <div class="flex flex-col items-center space-y-6 border-r border-gray-500">
+      <i class="fas fa-pencil-ruler fa-4x text-purple-400"></i>
+      <h2 class="font-bold text-2xl">Designer</h2>
+    </div>
+
+    <div class="flex flex-col items-center space-y-6 border-r border-gray-500">
+      <i class="fas fa-code fa-4x text-purple-400"></i>
+      <h2 class="font-bold text-2xl">Full-stack Developer</h2>
+    </div>
+
+    <div class="flex flex-col items-center space-y-6">
+      <i class="fas fa-user-tie fa-4x text-purple-400"></i>
+      <h2 class="font-bold text-2xl">Professional</h2>
+    </div>
   </div>
 </div>
 
