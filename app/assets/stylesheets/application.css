@@ -14,6 +14,10 @@
  *= require_self
  */
 
+.btn-slide {
+    transition: color .3s ease-in-out;
+}
+
 .btn-slide span:first-child{
     transform: translateX(-101%);
     transition: transform .3s ease-in
