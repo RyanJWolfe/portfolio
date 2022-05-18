@@ -7,11 +7,11 @@
     }
 
     .nav-header {
-        @apply hover:text-purple-600 hover:dark:text-purple-400 z-40
+        @apply hover:text-purple-700 hover:dark:text-purple-400 z-40
     }
 
     .btn-purple {
-        @apply inline-flex items-center justify-center border border-purple-600 dark:border-purple-400 px-3 py-1.5 text-sm font-medium text-purple-600 dark:text-purple-400 rounded hover:bg-purple-100 hover:dark:bg-gray-800 hover:dark:text-purple-200 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 transition-all ease-in-out duration-300
+        @apply inline-flex items-center justify-center border border-purple-600 dark:border-purple-400 px-3 py-1.5 text-sm font-medium text-purple-700 dark:text-purple-400 rounded hover:dark:bg-gray-800 hover:dark:text-purple-200 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 transition-all ease-in-out duration-300
     }
 
     .grid-column {
@@ -19,7 +19,7 @@
     }
 
     .text-link {
-        @apply hover:text-purple-400 underline underline-offset-8
+        @apply hover:text-purple-400 underline underline-offset-8 decoration-purple-400
     }
 }
 
