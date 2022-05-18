@@ -19,7 +19,7 @@
     }
 
     .text-link {
-        @apply hover:text-purple-400 underline underline-offset-8 decoration-purple-400
+        @apply hover:text-purple-400 underline underline-offset-8 decoration-gray-500
     }
 }
 
