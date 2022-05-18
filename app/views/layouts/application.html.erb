@@ -22,7 +22,7 @@
     </header>
     <%= render 'layouts/nav/sidebar' %>
     <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup"
-          class="w-full h-screen bg-neutral-100 dark:bg-gray-900 text-black dark:text-white scroll-smooth snap-mandatory snap-y overflow-auto">
+          class="relative w-full h-screen bg-neutral-100 dark:bg-gray-900 text-black dark:text-white scroll-smooth snap-mandatory snap-y overflow-auto">
       <%= yield %>
     </main>
   </body>

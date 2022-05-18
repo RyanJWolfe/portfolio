@@ -1,8 +1,14 @@
 <section id="home" data-nav-target="homeSection" class="section">
   <%= render 'portfolio/pages/home' %>
 </section>
-<section id="about" class="section">
+<section id="about" class="section flex flex-col space-y-12">
   <%= render 'portfolio/pages/about' %>
+  <div class="relative">
+    <div class="absolute parallelogram bg-gray-600 border-gray-400 opacity-75 z-30"></div>
+    <div class="absolute parallelogram border-4 border-purple-400 opacity-75 top-10 z-20"></div>
+    <div class="absolute parallelogram bg-gray-800 border-gray-800 opacity-75 top-20"></div>
+  </div>
+
 </section>
 <section id="what-i-do" class="section">
   <%= render 'portfolio/pages/experience' %>
