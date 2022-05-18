@@ -18,8 +18,12 @@
         @apply flex flex-col items-center space-y-10 px-8 text-center py-6 md:py-12
     }
 
-    .text-link {
+    .static-interactive {
         @apply hover:text-purple-400 underline underline-offset-8 decoration-gray-400 dark:decoration-gray-500
+    }
+
+    .static-interactive {
+        @apply text-purple-700 dark:text-purple-400 hover:underline underline-offset-8 decoration-gray-400 dark:decoration-gray-500 transition-all ease-in-out duration-150
     }
 }
 
