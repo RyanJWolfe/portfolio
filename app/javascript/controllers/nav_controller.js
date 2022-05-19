@@ -73,7 +73,7 @@ export default class extends Controller {
       } else {
         this.showNavbar()
       }
-    }, 2000)
+    }, 1500)
   }
 
   isScrolledIntoView(el) {
