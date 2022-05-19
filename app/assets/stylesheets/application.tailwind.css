@@ -20,7 +20,7 @@
     }
 
     .static-interactive {
-        @apply hover:text-purple-400 underline underline-offset-8 decoration-gray-400 dark:decoration-gray-500
+        @apply dark:hover:text-purple-400 underline underline-offset-4 hover:text-purple-700
     }
 
     .accent-text {
@@ -32,7 +32,6 @@
     .hover-underline {
         display: inline-block;
         position: relative;
-        color: #0087ca;
     }
 
     .hover-underline:after {
@@ -43,7 +42,6 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #0087ca;
         transform-origin: bottom right;
         transition: transform 0.3s ease-out;
     }
@@ -66,7 +64,6 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #0087ca;
         opacity: 0;
         transition: transform 0.3s ease-out;
     }
