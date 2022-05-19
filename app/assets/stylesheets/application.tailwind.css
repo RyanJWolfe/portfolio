@@ -43,7 +43,7 @@
         bottom: 0;
         left: 0;
         transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
+        transition: transform 150ms ease-out;
     }
 
     .hover-underline:hover:after {
@@ -54,7 +54,6 @@
     .hover-fade-in {
         display: inline-block;
         position: relative;
-        color: #0087ca;
     }
 
     .hover-fade-in:after {
@@ -65,7 +64,8 @@
         bottom: 0;
         left: 0;
         opacity: 0;
-        transition: transform 0.3s ease-out;
+        background-color: mediumpurple;
+        transition: all 300ms ease-out;
     }
 
     .hover-fade-in:hover:after {

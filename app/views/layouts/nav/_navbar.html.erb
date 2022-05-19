@@ -8,20 +8,16 @@
     </div>
 
     <div class="flex items-center space-x-4 md:space-x-8 text-md">
-      <%= render 'shared/button_with_translate', { classes: "nav-header",
-                                                   translate: "hover:-translate-y-1" } do %>
-        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about', } %>
+      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
+        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: '#about' } %>
       <% end %>
-      <%= render 'shared/button_with_translate', { classes: "nav-header",
-                                                   translate: "hover:-translate-y-1" } do %>
+      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <%= render 'layouts/nav/header', { label: '02.', title: 'Experience', route: '#what-i-do' } %>
       <% end %>
-      <%= render 'shared/button_with_translate', { classes: "nav-header",
-                                                   translate: "hover:-translate-y-1" } do %>
+      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <%= render 'layouts/nav/header', { label: '03.', title: 'Work', route: '#projects' } %>
       <% end %>
-      <%= render 'shared/button_with_translate', { classes: "",
-                                                   translate: "hover:-translate-y-1" } do %>
+      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <%= link_to 'Contact', '#contact', class: "btn-purple px-6 py-3 text-md"%>
       <% end %>
     </div>
