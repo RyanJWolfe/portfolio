@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
+      },
     },
   },
   plugins: [
