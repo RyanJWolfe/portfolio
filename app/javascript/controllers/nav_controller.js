@@ -46,6 +46,7 @@ export default class extends Controller {
   }
 
   showNavbar() {
+    this.addOrRemoveShadow()
     this.navbarTarget.style.top = "0"
     clearTimeout(this.timer)
     this.keepShowingNavbar()
@@ -53,11 +54,21 @@ export default class extends Controller {
 
   hideNavbar() {
     this.navbarTarget.style.top = "-150px"
+    clearInterval(this.interval)
+  }
+
+  addOrRemoveShadow() {
+    this.interval = setInterval(() => {
+      if (this.homeSectionInView)
+        this.navbarTarget.classList.remove("shadow-lg")
+      else
+        this.navbarTarget.classList.add("shadow-lg")
+    }, 100)
   }
 
   keepShowingNavbar() {
     this.timer = setTimeout(() => {
-      if (this.isScrolledIntoView(this.homeSectionTarget) === false) {
+      if (!this.homeSectionInView) {
         this.hideNavbar()
       } else {
         this.showNavbar()
@@ -75,5 +86,9 @@ export default class extends Controller {
     // Partially visible elements return true:
     //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
     return isVisible;
+  }
+
+  get homeSectionInView() {
+    return this.isScrolledIntoView(this.homeSectionTarget)
   }
 }
