@@ -4,7 +4,7 @@
 
 @layer components {
     .section {
-        @apply relative container mx-auto px-2 md:px-24 w-full h-screen flex items-center snap-start
+        @apply relative container mx-auto px-2 md:px-32 w-full h-screen flex items-center snap-start
     }
 
     .nav-header {
