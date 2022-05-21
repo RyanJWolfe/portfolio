@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["navbar", "homeSection"]
+  static targets = ["navbar", "sidebar", "homeSection", 'contactInfo']
 
   initialize() {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -34,8 +34,10 @@ export default class extends Controller {
   onWheel(e) {
     if (e.wheelDeltaY > 0) {
       this.showNavbar()
+      this.toggleSidebar(false)
     } else {
       this.hideNavbar()
+      this.toggleSidebar(true)
     }
   }
 
@@ -76,6 +78,21 @@ export default class extends Controller {
     }, 1500)
   }
 
+  toggleSidebar(scrollDirectionDown) {
+      if (this.contactInfoInView)
+        this.hideSidebar()
+      else
+        this.showSidebar()
+  }
+
+  hideSidebar() {
+    this.sidebarTarget.style.bottom = "-300px"
+  }
+
+  showSidebar() {
+    this.sidebarTarget.style.bottom = "0"
+  }
+
   isScrolledIntoView(el) {
     let rect = el.getBoundingClientRect();
     let elemTop = rect.top;
@@ -90,5 +107,9 @@ export default class extends Controller {
 
   get homeSectionInView() {
     return this.isScrolledIntoView(this.homeSectionTarget)
+  }
+
+  get contactInfoInView() {
+    return this.isScrolledIntoView(this.contactInfoTarget)
   }
 }
