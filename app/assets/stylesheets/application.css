@@ -28,13 +28,13 @@
 }
 
 .parallelogram-parent:hover > .parallelogram-1 {
-    transform: skew(20deg) translateY(-25%);
+    transform: skew(20deg) translate(2rem, -10%);
 }
 .parallelogram-parent:hover > .parallelogram-2 {
-    transform: skew(20deg) translate(-2rem, 25%);
+    transform: skew(20deg) translate(-1rem, 10%);
 }
 .parallelogram-parent:hover > .parallelogram-3 {
-    transform: skew(20deg) translate(-4rem, 75%);
+    transform: skew(20deg) translate(-4rem, 30%);
 }
 
 
