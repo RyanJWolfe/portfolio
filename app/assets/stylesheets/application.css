@@ -41,3 +41,12 @@
 .background-transition {
     transition: background-color 300ms ease-in-out;
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}

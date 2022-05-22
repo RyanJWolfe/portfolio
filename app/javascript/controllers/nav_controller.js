@@ -11,6 +11,22 @@ export default class extends Controller {
       document.documentElement.classList.remove('dark')
       localStorage.theme = 'light'
     }
+
+    const appearOptions = {}
+    const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return
+        } else {
+          entry.target.classList.add('appear')
+          appearOnScroll.unobserve(entry.target)
+        }
+      })
+    }, appearOptions)
+
+    this.faders.forEach(fader => {
+      appearOnScroll.observe(fader)
+    })
   }
 
   toggleTheme() {
@@ -111,5 +127,9 @@ export default class extends Controller {
 
   get contactInfoInView() {
     return this.isScrolledIntoView(this.contactInfoTarget)
+  }
+
+  get faders() {
+    return document.querySelectorAll(".fade-in")
   }
 }
