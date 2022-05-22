@@ -4,16 +4,16 @@
 
 @layer components {
     .section {
-        @apply relative container mx-auto p-4 pt-24 md:pt-0 md:px-32 w-full h-screen flex items-center snap-start
+        @apply relative container mx-auto p-4 md:px-32 lg:px-60 h-screen flex items-center snap-start
     }
     .contact-section {
-        @apply relative w-full h-fit md:h-4/6 flex items-center snap-start px-2 md:px-32 lg:container lg:mx-auto
+        @apply relative w-full h-fit md:h-4/6 flex items-center snap-start px-2 md:px-32 lg:px-60 lg:container lg:mx-auto
     }
 
     .contact-section .hero {}
 
     .experience-section {
-        @apply relative w-full h-fit px-2 md:px-32 lg:container lg:mx-auto snap-start flex flex-col items-center justify-center tracking-wide
+        @apply relative w-full h-fit px-2 md:px-32 lg:px-60 lg:container lg:mx-auto snap-start flex flex-col items-center justify-center tracking-wide
     }
 
     .card {
