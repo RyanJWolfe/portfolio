@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["navbar", "sidebar", "homeSection", 'contactInfo']
+  static targets = ["navbar", "sidebar", "homeSection", "contactInfo"]
 
   initialize() {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
