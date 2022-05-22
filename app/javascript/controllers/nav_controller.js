@@ -12,6 +12,7 @@ export default class extends Controller {
       localStorage.theme = 'light'
     }
 
+    // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
     const appearOptions = {}
     const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
       entries.forEach(entry => {

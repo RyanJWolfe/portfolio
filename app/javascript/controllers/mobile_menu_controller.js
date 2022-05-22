@@ -3,10 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["userDropdown", "dropdown"]
 
-  connect() {
-    console.log("Hellow world")
-  }
-
   toggleUserMenu(e) {
     e.stopPropagation()
     this.hideMenuDropdown()
@@ -15,14 +11,12 @@ export default class extends Controller {
 
   toggleMenuDropdown(e) {
     e.stopPropagation()
-    console.log("TOGGLE")
     // this.hideUserDropdown()
     this.dropdownTarget.classList.toggle('hidden')
   }
 
   hide() {
     // this.hideUserDropdown()
-    console.log("HIDE")
     if (this.hasDropdownTarget)
       this.dropdownTarget.classList.add('hidden')
   }
