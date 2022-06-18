@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --nav-load-time: 300ms;
+        --nav-link-load-time: 400ms;
+        --content-load-delay: calc(var(--nav-load-time) + var(--nav-link-load-time));
+        --content-secondary-load-delay: calc(var(--content-load-delay) + 200ms);
+        --nav-total-load-time: calc(var(--nav-load-time) + var(--nav-link-load-time) + 200ms);
+        --content-long-load-delay: calc(var(--nav-total-load-time) + 100ms);
+        --content-secondary-long-load-delay: calc(var(--nav-total-load-time) + 300ms);
+    }
+}
+
 @layer components {
     .section {
         @apply relative container mx-auto p-4 h-screen flex items-center snap-start max-w-5xl
