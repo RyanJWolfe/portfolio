@@ -7,7 +7,7 @@
         @apply relative container mx-auto p-4 h-screen flex items-center snap-start max-w-5xl
     }
     .contact-section {
-        @apply relative h-fit md:h-4/6 flex items-center snap-start px-2 container mx-auto max-w-5xl
+        @apply relative h-fit flex items-center snap-start px-2 container mx-auto max-w-5xl
     }
 
     .contact-section .hero {}
