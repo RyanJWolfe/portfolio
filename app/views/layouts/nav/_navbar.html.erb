@@ -24,16 +24,16 @@
       <% end %>
     </div>
 
-    <div>
+    <div class="flex space-x-4">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <button title="Toggle color scheme" data-action="click->nav#toggleTheme" type=button>
           <%= render 'layouts/nav/feather_moon' %>
           <%= render 'layouts/nav/feather_sun' %>
         </button>
       <% end %>
+      <%= render 'layouts/nav/navbar/mobile_menu_button' %>
     </div>
 
-    <%= render 'layouts/nav/navbar/mobile_menu_button' %>
 
   </div>
 </div>
