@@ -109,7 +109,7 @@
 
     .btn-slide span:first-child {
         transform: translateX(-101%);
-        transition: transform .3s ease-in
+        transition: transform 200ms ease-out;
     }
     .btn-slide:hover span {
         transform: translateX(0)
