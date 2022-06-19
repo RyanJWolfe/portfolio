@@ -16,16 +16,16 @@
 
 @layer components {
     .section {
-        @apply relative container mx-auto p-6 sm:px-12 lg:px-12 h-screen flex items-center snap-start max-w-5xl
+        @apply relative container mx-auto p-6 sm:px-12 lg:px-12 h-screen flex items-center max-w-5xl
     }
     .contact-section {
-        @apply relative h-fit flex items-center snap-start px-2 container mx-auto max-w-5xl
+        @apply relative h-fit flex items-center px-2 container mx-auto max-w-5xl
     }
 
     .contact-section .hero {}
 
     .experience-section {
-        @apply relative h-fit px-2 container mx-auto snap-start flex flex-col items-center justify-center tracking-wide max-w-5xl
+        @apply relative h-fit px-2 container mx-auto flex flex-col items-center justify-center tracking-wide max-w-5xl
     }
 
     .card {
