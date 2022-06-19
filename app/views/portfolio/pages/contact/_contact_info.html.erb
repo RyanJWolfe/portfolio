@@ -1,4 +1,10 @@
-<div data-nav-target="contactInfo" class="fade-in flex flex-col space-y-6 items-center snap-start">
+<div data-nav-target="contactInfo" class="fade-in flex flex-col space-y-20 items-center">
+  <p class="self-start tracking-wider text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg w-full">
+    Have a question, a business inquiry, or just want to say hello?
+    <br/>
+    My inbox is always open!
+  </p>
+  <%= link_to "Let's Chat", '#contact', class: "self-center btn-purple-secondary"%>
   <div class="flex space-x-12 py-2 md:py-5">
     <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to 'https://github.com/RyanJWolfe', :target => '_blank', class: "text-gray-900 dark:text-gray-400 hover:text-purple-700 dark:hover:text-purple-400" do %>
@@ -25,11 +31,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
       <% end %>
     <% end %>
-  </div>
-
-  <div class="flex space-x-4 text-gray-900 dark:text-gray-400">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail text-purple-700 dark:text-purple-400"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-    <a href="mailto:me@ryanjwolfe.com" class="hover-fade-in">me@ryanjwolfe.com</a>
   </div>
 
 </div>
