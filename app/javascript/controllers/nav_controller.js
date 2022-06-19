@@ -58,17 +58,9 @@ export default class extends Controller {
     }
   }
 
-  onHover() {
-    clearTimeout(this.timer)
-    this.keepShowingNavbar()
-
-  }
-
   showNavbar() {
     this.addOrRemoveShadow()
     this.navbarTarget.style.top = "0"
-    clearTimeout(this.timer)
-    this.keepShowingNavbar()
   }
 
   hideNavbar() {
@@ -83,16 +75,6 @@ export default class extends Controller {
       else
         this.navbarTarget.classList.add("shadow-lg")
     }, 100)
-  }
-
-  keepShowingNavbar() {
-    this.timer = setTimeout(() => {
-      if (!this.homeSectionInView) {
-        this.hideNavbar()
-      } else {
-        this.showNavbar()
-      }
-    }, 1500)
   }
 
   toggleSidebar(scrollDirectionDown) {
