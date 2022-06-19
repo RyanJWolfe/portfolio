@@ -19,17 +19,17 @@ export default class extends Controller {
   toggleMenuDropdown(e) {
     e.stopPropagation()
     // this.hideUserDropdown()
-    if (this.dropdownTarget.style.left == '0') {
-      this.dropdownTarget.style.left = '-100%'
+    if (this.dropdownTarget.style.right == '0') {
+      this.dropdownTarget.style.right = '-100%'
     } else {
-      this.dropdownTarget.style.left = '0'
+      this.dropdownTarget.style.right = '0'
     }
   }
 
   hide() {
     // this.hideUserDropdown()
     if (this.hasDropdownTarget)
-      this.dropdownTarget.style.left = '-100%'
+      this.dropdownTarget.style.right = '-100%'
   }
 
   hideUserDropdown() {
