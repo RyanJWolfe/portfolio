@@ -48,7 +48,7 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based transition duration-300 ease-in
     }
     .btn:focus {
         @apply outline-none ring ring-offset-2
@@ -63,7 +63,7 @@
         @apply bg-secondary text-white hover:bg-gray-700 focus:ring-secondary focus:ring-opacity-50 active:bg-secondary-press border border-secondary
     }
     .btn-tertiary {
-        @apply bg-none border border-primary hover:bg-gray-400 hover:dark:bg-gray-800 dark:hover:text-based  hover:bg-opacity-25 text-primary dark:text-primary-hover focus:ring-primary focus:ring-opacity-50 active:bg-primary-press
+        @apply bg-none border border-primary hover:bg-gray-400 hover:dark:bg-gray-800 dark:hover:text-based  hover:bg-opacity-25 text-primary dark:text-primary-hover focus:ring-primary focus:ring-opacity-50
     }
     .section {
         @apply relative container mx-auto p-6 sm:px-12 lg:px-12 h-screen flex items-center max-w-5xl
