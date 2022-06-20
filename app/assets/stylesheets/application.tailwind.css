@@ -48,7 +48,7 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based transition duration-300 ease-in
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
     }
     .btn:focus {
         @apply outline-none ring ring-offset-2
