@@ -1,5 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`
+    }
+    return `rgb(var(${variableName}))`
+  }
+}
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -11,6 +20,39 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        based: withOpacity('--color-text-based'),
+        'based-hover': withOpacity('--color-text-based-hover'),
+        muted: withOpacity('--color-text-muted'),
+        primary: withOpacity('--color-primary'),
+        secondary: withOpacity('--color-secondary'),
+        'bg-base': withOpacity('--color-bg'),
+        'surface': withOpacity('--color-bg-surface'),
+        'surface-accent': withOpacity('--color-bg-surface-accent'),
+        'primary-hover': withOpacity('--color-primary-hover'),
+        'primary-press': withOpacity('--color-primary-press'),
+        'secondary-hover': withOpacity('--color-secondary-hover'),
+        'secondary-press': withOpacity('--color-secondary-press'),
+      },
+      textColor: {
+        based: withOpacity('--color-text-based'),
+        muted: withOpacity('--color-text-muted'),
+        inverted: withOpacity('--color-text-inverted'),
+        primary: withOpacity('--color-primary'),
+      },
+      backgroundColor: {
+        base: withOpacity('--color-bg'),
+        primary: withOpacity('--color-primary'),
+      },
+      borderColor: {
+        base: withOpacity('--color-bg'),
+      },
+      gradientColorStops: {
+        base: {
+          hue: withOpacity('--color-bg'),
+          surface: withOpacity('--color-bg-surface'),
+        },
       },
       transitionDuration: {
         'nav-load': 'var(--nav-load-time)',
