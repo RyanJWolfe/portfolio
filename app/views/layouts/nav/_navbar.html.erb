@@ -19,18 +19,14 @@
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <%= render 'layouts/nav/header', { label: '03.', title: 'Projects', route: '#projects', delay: '500ms' } %>
       <% end %>
-      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
-        <%= link_to 'Contact', '#contact', class: "btn btn-tertiary animate-nav-link-load opacity-0", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
-      <% end %>
+      <%= link_to 'Contact', '#contact', class: "btn btn-tertiary animate-nav-link-load opacity-0", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
     </div>
 
     <div class="flex space-x-4">
-      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
-        <button title="Toggle color scheme" data-action="click->nav#toggleTheme" type=button>
-          <%= render 'layouts/nav/feather_moon' %>
-          <%= render 'layouts/nav/feather_sun' %>
-        </button>
-      <% end %>
+      <button title="Toggle color scheme" data-action="click->nav#toggleTheme" type=button>
+        <%= render 'layouts/nav/feather_moon' %>
+        <%= render 'layouts/nav/feather_sun' %>
+      </button>
       <%= render 'layouts/nav/navbar/mobile_menu_button' %>
     </div>
 
