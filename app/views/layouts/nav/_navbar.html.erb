@@ -1,7 +1,7 @@
-<div class="color-transition <%= 'animate-nav-load' if current_page? root_path %> bg-base/90 backdrop-blur text-black dark:text-white tracking-wider px-6 md:px-12 xl:px-16 py-6">
+<div class="<%= 'animate-nav-load' if current_page? root_path %> bg-base/90 backdrop-blur text-based tracking-wider px-6 md:px-12 xl:px-16 py-6">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
 
-    <div class="text-purple-700 dark:text-purple-400 hover:text-purple-500 hover:dark:text-purple-200 transition-all ease-out duration-300">
+    <div class="hover-fade-in transition-all ease-out duration-300">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to '#home' do %>
           <%= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>

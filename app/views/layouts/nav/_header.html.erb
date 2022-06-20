@@ -1,7 +1,7 @@
-<div class="after:bg-purple-700 dark:after:bg-purple-400 hover-fade-in">
+<div class="after:bg-primary hover-fade-in">
   <%= link_to route, class: "#{'animate-nav-link-load opacity-0'}", style: "animation-delay: calc(var(--nav-load-time) + #{delay});" do %>
     <div class="flex space-x-2">
-      <p class="text-purple-700 dark:text-purple-400 font-medium"><%= label %></p>
+      <p class="text-primary font-medium"><%= label %></p>
       <span class="nav-header"><%= title %></span>
     </div>
   <% end %>
