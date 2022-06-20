@@ -48,10 +48,16 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded focus:outline-none focus:ring focus:ring-offset-2 tracking-wider font-semibold text-sm sm:text-base text-based
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
+    }
+    .btn:focus {
+        @apply outline-none ring ring-offset-2
     }
     .btn-primary {
-        @apply bg-primary text-white hover:bg-primary-hover focus:ring-primary focus:ring-opacity-50 active:bg-primary-press border border-primary
+        @apply bg-primary text-white hover:bg-primary-hover active:bg-primary-press border border-primary
+    }
+    .btn-primary:focus {
+        @apply outline-none ring-primary;
     }
     .btn-secondary {
         @apply bg-secondary text-white hover:bg-gray-700 focus:ring-secondary focus:ring-opacity-50 active:bg-secondary-press border border-secondary
@@ -65,42 +71,19 @@
     .contact-section {
         @apply relative h-fit flex items-center p-6 sm:px-12 lg:px-12 container mx-auto max-w-5xl
     }
-
-    .contact-section .hero {}
-
     .experience-section {
         @apply relative h-fit p-6 sm:px-12 lg:px-12 container mx-auto flex flex-col items-center justify-center tracking-wide max-w-5xl
     }
-
-    .nav-header {
-        @apply hover:text-purple-700 hover:dark:text-purple-400
-    }
-
-    .navbar-dropdown {
-        @apply z-50 my-1 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600
-    }
-    .navbar-dropdown-list-item {
-        @apply block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white
-    }
-
-    .btn-purple {
-        @apply inline-flex items-center justify-center border border-purple-700 dark:border-purple-400 px-6 py-3 text-base font-medium text-purple-700 dark:text-purple-400 rounded hover:dark:bg-gray-800  focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 transition-all ease-in-out duration-300 tracking-wider
-    }
-
-    .btn-purple-secondary {
-        @apply inline-flex items-center justify-center bg-purple-700 dark:bg-transparent border border-purple-700 dark:border-purple-400 px-5 py-2.5 text-lg font-medium text-white dark:text-purple-400 rounded hover:bg-purple-500 hover:dark:text-white  hover:dark:bg-gray-800 hover:text-neutral-200 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 transition-all ease-in-out duration-300 tracking-wider
-    }
-
     .grid-column {
         @apply flex flex-col items-center space-y-4 md:space-y-10 px-2 md:px-8 text-center py-6 md:py-12
     }
 
     .static-interactive {
-        @apply dark:hover:text-purple-400 underline underline-offset-4 hover:text-purple-700
+        @apply hover:text-primary underline underline-offset-4
     }
 
     .accent-text {
-        @apply text-purple-700 dark:text-purple-400 hover-underline after:bg-purple-700 dark:after:bg-purple-400
+        @apply text-primary hover-underline after:bg-primary
     }
 }
 

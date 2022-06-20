@@ -2,7 +2,7 @@
   <%= link_to route, class: "#{'animate-nav-link-load opacity-0'}", style: "animation-delay: calc(var(--nav-load-time) + #{delay});" do %>
     <div class="flex space-x-2">
       <p class="text-primary font-medium"><%= label %></p>
-      <span class="nav-header"><%= title %></span>
+      <span class="hover:text-primary"><%= title %></span>
     </div>
   <% end %>
 </div>
