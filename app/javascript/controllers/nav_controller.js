@@ -30,6 +30,10 @@ export default class extends Controller {
     })
   }
 
+  connect() {
+    this.addOrRemoveShadow();
+  }
+
   toggleTheme() {
     if (localStorage.theme === 'dark') {
       document.documentElement.classList.remove('theme-dark')

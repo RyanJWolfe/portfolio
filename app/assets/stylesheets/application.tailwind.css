@@ -69,7 +69,7 @@
         @apply relative container mx-auto p-6 sm:px-12 lg:px-12 h-screen flex items-center max-w-5xl
     }
     .contact-section {
-        @apply relative h-fit flex items-center p-6 sm:px-12 lg:px-12 container mx-auto max-w-5xl
+        @apply section h-fit
     }
     .experience-section {
         @apply relative h-fit p-6 sm:px-12 lg:px-12 container mx-auto flex flex-col items-center justify-center tracking-wide max-w-5xl

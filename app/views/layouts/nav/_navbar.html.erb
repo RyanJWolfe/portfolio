@@ -1,7 +1,8 @@
-<div class="<%= 'animate-nav-load' if current_page? root_path %> bg-base/90 backdrop-blur text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20 py-6">
+<div class="<%= 'animate-nav-load' if current_page? root_path %> bg-base/90 backdrop-blur text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20 py-3 md:py-6">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
 
-    <div class="after:bg-primary hover-fade-in">
+    <div class="after:bg-primary hover-fade-in <%= 'animate-nav-link-load opacity-0' if current_page? root_path %>"
+         style="animation-delay: var(--nav-load-time);">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to '#home' do %>
           <%= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>

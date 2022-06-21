@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="theme-dark dark" lang="en">
+<html class="theme-dark dark scroll-smooth" lang="en">
   <head>
     <title>Ryan Wolfe</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -29,7 +29,7 @@
     </header>
     <%= render 'layouts/nav/sidebar' %>
     <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup  click->mobile-menu#hide"
-          class="relative w-full scroll-smooth text-based overflow-auto background-transition">
+          class="relative w-full text-based overflow-auto background-transition">
       <%= yield %>
     </main>
   </body>
