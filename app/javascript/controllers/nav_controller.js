@@ -67,7 +67,7 @@ export default class extends Controller {
 
   hideNavbar() {
     if (this.hasMenuBtnTarget) {
-      if (this.menuBtnTarget.classList.contains('open')) {
+      if (this.menuBtnTarget.classList.contains('open') || this.scrollTop < 20) {
         return
       }
     }
