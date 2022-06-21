@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { isScrolledIntoView } from "../helpers/scrolled_into_view"
 
 export default class extends Controller {
   static targets = ["dropdown", "menuBtn"]
@@ -33,5 +34,9 @@ export default class extends Controller {
   hideMenuDropdown() {
     if (this.hasDropdownTarget)
       this.dropdownTarget.classList.add('hidden')
+  }
+
+  get currentAnchor() {
+    return window.location.hash
   }
 }

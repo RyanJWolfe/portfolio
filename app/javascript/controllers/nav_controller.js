@@ -1,9 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
-import TextScramble from "../helpers/text_scramble";
-
+import TextScramble from "../helpers/text_scramble"
+import { isScrolledIntoView } from "../helpers/scrolled_into_view"
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar"]
+  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar", "sideMenu", "contactLink"]
 
   initialize() {
     // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
@@ -30,6 +30,11 @@ export default class extends Controller {
     })
 
     window.onscroll = (e) => {
+      if (this.contactInfoInView) {
+        this.contactLinkTarget.classList.add("py-1.5", "pr-3", "border-r-4", "border-purple-700", "dark:border-purple-400", "text-purple-700", "dark:text-purple-400", "font-semibold")
+      } else {
+        this.contactLinkTarget.classList.remove("py-1.5", "pr-3", "border-r-4", "border-purple-700", "dark:border-purple-400", "text-purple-700", "dark:text-purple-400", "font-semibold")
+      }
       let scrolledDown = this.oldScroll < this.scrollTop
       if (scrolledDown) {
         this.hideNavbar()
@@ -107,20 +112,8 @@ export default class extends Controller {
     this.sidebarTarget.style.bottom = "0"
   }
 
-  isScrolledIntoView(el) {
-    let rect = el.getBoundingClientRect();
-    let elemTop = rect.top;
-    let elemBottom = rect.bottom;
-
-    // Only completely visible elements return true:
-    let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    // Partially visible elements return true:
-    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;
-  }
-
   get contactInfoInView() {
-    return this.isScrolledIntoView(this.contactInfoTarget)
+    return isScrolledIntoView(this.contactInfoTarget)
   }
 
   get faders() {
