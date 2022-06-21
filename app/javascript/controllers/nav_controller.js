@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import TextScramble from "../helpers/text_scramble";
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
@@ -12,6 +13,10 @@ export default class extends Controller {
         if (!entry.isIntersecting) {
           return
         } else {
+          if (entry.target.classList.contains('scramble')) {
+            let textScramble = new TextScramble(entry.target)
+            textScramble.setText(entry.target.innerText).then(() => {})
+          }
           setTimeout(() => {
             entry.target.classList.add('appear')
             appearOnScroll.unobserve(entry.target)
