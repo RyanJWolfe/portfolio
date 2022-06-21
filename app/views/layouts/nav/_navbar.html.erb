@@ -1,4 +1,6 @@
-<div class="<%= 'animate-nav-load' if current_page? root_path %> bg-base/90 backdrop-blur text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20 py-3 md:py-6">
+<div data-nav-target="navbar"  style="transition: padding 0.3s ease-in-out;"
+     class="bg-base/90 backdrop-blur text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20
+            <%= 'animate-nav-load' if current_page? root_path %> ">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
 
     <div class="after:bg-primary hover-fade-in <%= 'animate-nav-link-load opacity-0' if current_page? root_path %>"

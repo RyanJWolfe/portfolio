@@ -2,16 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["navbar", "sidebar", "homeSection", "contactInfo", "menuBtn"]
+  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar"]
 
   initialize() {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      localStorage.theme = 'dark'
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.theme = 'light'
-    }
-
     // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
     const appearOptions = {}
     const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
@@ -30,15 +23,14 @@ export default class extends Controller {
     })
 
     window.onscroll = (e) => {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop
-      let scrolledDown = this.oldScroll < scrollTop
+      let scrolledDown = this.oldScroll < this.scrollTop
       if (scrolledDown) {
         this.hideNavbar()
       } else {
         this.showNavbar()
       }
       this.toggleSidebar()
-      this.oldScroll = scrollTop
+      this.oldScroll = this.scrollTop
     }
   }
 
@@ -68,7 +60,7 @@ export default class extends Controller {
 
   showNavbar() {
     this.addOrRemoveShadow()
-    this.navbarTarget.style.top = "0"
+    this.headerTarget.style.top = "0"
   }
 
   hideNavbar() {
@@ -77,17 +69,20 @@ export default class extends Controller {
         return
       }
     }
-    this.navbarTarget.style.top = "-150px"
-    clearInterval(this.interval)
+    this.headerTarget.style.top = "-150px"
   }
 
   addOrRemoveShadow() {
-    this.interval = setInterval(() => {
-      if (this.homeSectionInView)
-        this.navbarTarget.classList.remove("shadow-lg")
-      else
-        this.navbarTarget.classList.add("shadow-lg")
-    }, 100)
+    if (this.scrollTop < 5) {
+      this.headerTarget.classList.remove("shadow-lg")
+      this.navbarTarget.classList.remove("py-1.5", "md:py-3")
+      this.navbarTarget.classList.add("py-3", "md:py-6")
+    }
+    else {
+      this.headerTarget.classList.add("shadow-lg")
+      this.navbarTarget.classList.add("py-1.5", "md:py-3")
+      this.navbarTarget.classList.remove("py-3", "md:py-6")
+    }
   }
 
   toggleSidebar() {
@@ -117,15 +112,15 @@ export default class extends Controller {
     return isVisible;
   }
 
-  get homeSectionInView() {
-    return this.isScrolledIntoView(this.homeSectionTarget)
-  }
-
   get contactInfoInView() {
     return this.isScrolledIntoView(this.contactInfoTarget)
   }
 
   get faders() {
     return document.querySelectorAll(".fade-in")
+  }
+
+  get scrollTop() {
+    return window.scrollY || document.documentElement.scrollTop;
   }
 }
