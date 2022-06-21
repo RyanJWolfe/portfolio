@@ -46,7 +46,7 @@
     opacity: 0;
     transition-property: opacity, transform;
     transition-duration: 1s;
-    transform: translate(0, 10vh);
+    transform: translate(0, 5vh);
 }
 
 .fade-in.appear {
