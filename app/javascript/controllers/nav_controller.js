@@ -37,6 +37,7 @@ export default class extends Controller {
       } else {
         this.showNavbar()
       }
+      this.toggleSidebar()
       this.oldScroll = scrollTop
     }
   }
@@ -62,16 +63,6 @@ export default class extends Controller {
       this.showNavbar()
     } else if (e.key === "ArrowDown" || e.key === ' ') {
       this.hideNavbar()
-    }
-  }
-
-  onWheel(e) {
-    if (e.wheelDeltaY > 0) {
-      this.showNavbar()
-      this.toggleSidebar()
-    } else {
-      this.hideNavbar()
-      this.toggleSidebar()
     }
   }
 
