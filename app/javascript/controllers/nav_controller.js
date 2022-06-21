@@ -66,9 +66,13 @@ export default class extends Controller {
   }
 
   hideNavbar() {
-    if (!this.menuBtnTarget.contains('open'))
-      this.navbarTarget.style.top = "-150px"
-      clearInterval(this.interval)
+    if (this.hasMenuBtnTarget) {
+      if (this.menuBtnTarget.classList.contains('open')) {
+        return
+      }
+    }
+    this.navbarTarget.style.top = "-150px"
+    clearInterval(this.interval)
   }
 
   addOrRemoveShadow() {
@@ -81,10 +85,10 @@ export default class extends Controller {
   }
 
   toggleSidebar(scrollDirectionDown) {
-      if (this.contactInfoInView)
-        this.hideSidebar()
-      else
-        this.showSidebar()
+    if (this.contactInfoInView)
+      this.hideSidebar()
+    else
+      this.showSidebar()
   }
 
   hideSidebar() {
