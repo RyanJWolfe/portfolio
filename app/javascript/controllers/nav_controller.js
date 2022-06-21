@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["navbar", "sidebar", "homeSection", "contactInfo"]
+  static targets = ["navbar", "sidebar", "homeSection", "contactInfo", "menuBtn"]
 
   initialize() {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -66,8 +66,9 @@ export default class extends Controller {
   }
 
   hideNavbar() {
-    this.navbarTarget.style.top = "-150px"
-    clearInterval(this.interval)
+    if (!this.menuBtnTarget.contains('open'))
+      this.navbarTarget.style.top = "-150px"
+      clearInterval(this.interval)
   }
 
   addOrRemoveShadow() {
