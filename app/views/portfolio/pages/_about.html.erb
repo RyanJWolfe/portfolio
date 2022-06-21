@@ -1,15 +1,12 @@
-<div class="fade-in w-full h-full justify-between items-center">
+<div class="w-full h-full justify-between items-center">
 
   <div class="grid md:grid-cols-2 gap-y-6">
     <div class="space-y-6">
       <%= render 'portfolio/pages/section_header', { label: "01", title: "About Me"}%>
       <div class="flex flex-col space-y-4 text-muted text-base md:text-lg text-left">
-        <p>Hello! My name is Ryan, and I enjoy creating applications that live on the internet.
-          I graduated with honors from the University of Arizona
-          with a B.S. in Electrical and Computer Engineering in 2019.
-            Since then I have been working full time as a software development engineer.
+        <p class="fade-in">Hello! My name is Ryan, and I enjoy creating applications that live on the internet.
         </p>
-        <p>
+        <p class="fade-in">
           I began my career at
           <span>
             <%= link_to 'General Dynamics', 'https://gdmissionsystems.com/', target: '_blank', class: "accent-text" %>.
@@ -25,7 +22,7 @@
           embedded systems. I later transitioned in to web development,
           where I found a passion for building digital experiences.
         </p>
-        <p>
+        <p class="fade-in">
           Currently, I am a senior software development engineer at
           <span>
             <%= link_to 'StrongMind', 'https://www.strongmind.com/', target: '_blank', class: "accent-text" %>.
@@ -35,7 +32,7 @@
         </p>
       </div>
     </div>
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center fade-in">
       <%= image_tag 'headshot.jpg', class: "rounded-lg h-52 object-cover object-center shadow-xl align-center" %>
     </div>
   </div>
