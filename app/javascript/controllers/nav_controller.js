@@ -12,8 +12,10 @@ export default class extends Controller {
         if (!entry.isIntersecting) {
           return
         } else {
-          entry.target.classList.add('appear')
-          appearOnScroll.unobserve(entry.target)
+          setTimeout(() => {
+            entry.target.classList.add('appear')
+            appearOnScroll.unobserve(entry.target)
+          }, 100)
         }
       })
     }, appearOptions)
