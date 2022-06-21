@@ -66,7 +66,7 @@
         @apply bg-none border border-primary hover:bg-gray-400 hover:dark:bg-gray-800 dark:hover:text-based  hover:bg-opacity-25 text-primary dark:text-primary-hover focus:ring-primary focus:ring-opacity-50
     }
     .section {
-        @apply relative container mx-auto p-6 sm:px-12 lg:px-12 h-screen flex items-center max-w-5xl
+        @apply relative container mx-auto px-8 sm:px-12 lg:px-12 h-screen flex items-center max-w-5xl
     }
     .contact-section {
         @apply section h-fit
