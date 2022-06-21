@@ -5,6 +5,20 @@
       <%= render 'portfolio/pages/section_header', { label: "01", title: "About Me"}%>
       <div class="flex flex-col space-y-4 text-muted text-base md:text-lg text-left">
         <p class="fade-in">Hello! My name is Ryan, I am a full-stack developer with a passion for learning and solving problems.
+          I began my career at
+          <span>
+            <%= link_to 'General Dynamics', 'https://gdmissionsystems.com/', target: '_blank', class: "accent-text" %>.
+          </span>
+          , where I contributed software for
+          <span>
+            <%= link_to 'GPS', 'https://www.gpssource.com/collections/apnt/products/ed3-global-positioning-system-developer-kit', target: '_blank', class: "accent-text" %>
+          </span>
+          and
+          <span>
+            <%= link_to 'secure communication', 'https://gdmissionsystems.com/products/cross-domain-solutions/tacds-tactical-cross-domain-solution', target: '_blank', class: "accent-text" %>
+          </span>
+          embedded systems. I later transitioned in to web development,
+          where I found a passion for building digital experiences.
         </p>
         <p class="fade-in">
           Currently, I am a senior software development engineer at

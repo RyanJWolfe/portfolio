@@ -1,6 +1,22 @@
 <div class="fade-in flex flex-col space-y-6">
   <%= render 'portfolio/pages/section_header', { label: "02", title: "What I Do"}%>
-  <%= render 'portfolio/pages/experience/hero_three_column' %>
+  <%#= render 'portfolio/pages/experience/hero_three_column' %>
+  <p class="fade-in">
+    I began my career at
+    <span>
+            <%= link_to 'General Dynamics', 'https://gdmissionsystems.com/', target: '_blank', class: "accent-text" %>.
+          </span>
+    , where I contributed software for
+    <span>
+            <%= link_to 'GPS', 'https://www.gpssource.com/collections/apnt/products/ed3-global-positioning-system-developer-kit', target: '_blank', class: "accent-text" %>
+          </span>
+    and
+    <span>
+            <%= link_to 'secure communication', 'https://gdmissionsystems.com/products/cross-domain-solutions/tacds-tactical-cross-domain-solution', target: '_blank', class: "accent-text" %>
+          </span>
+    embedded systems. I later transitioned in to web development,
+    where I found a passion for building digital experiences.
+  </p>
 </div>
 
 

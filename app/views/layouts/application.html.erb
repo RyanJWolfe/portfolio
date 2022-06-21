@@ -28,7 +28,7 @@
       <%= render 'layouts/nav/navbar' %>
     </header>
     <%= render 'layouts/nav/sidebar' %>
-    <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup  click->mobile-menu#hide"
+    <main data-action="keyup@window->nav#onKeyup click->mobile-menu#hide"
           class="relative w-full text-based overflow-auto background-transition">
       <%= yield %>
     </main>

@@ -28,6 +28,17 @@ export default class extends Controller {
     this.faders.forEach(fader => {
       appearOnScroll.observe(fader)
     })
+
+    window.onscroll = (e) => {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop
+      let scrolledDown = this.oldScroll < scrollTop
+      if (scrolledDown) {
+        this.hideNavbar()
+      } else {
+        this.showNavbar()
+      }
+      this.oldScroll = scrollTop
+    }
   }
 
   connect() {
@@ -57,10 +68,10 @@ export default class extends Controller {
   onWheel(e) {
     if (e.wheelDeltaY > 0) {
       this.showNavbar()
-      this.toggleSidebar(false)
+      this.toggleSidebar()
     } else {
       this.hideNavbar()
-      this.toggleSidebar(true)
+      this.toggleSidebar()
     }
   }
 
@@ -88,7 +99,7 @@ export default class extends Controller {
     }, 100)
   }
 
-  toggleSidebar(scrollDirectionDown) {
+  toggleSidebar() {
     if (this.contactInfoInView)
       this.hideSidebar()
     else
