@@ -27,10 +27,10 @@
     transition: transform .5s ease-in-out;
 }
 .menu-btn__burger::before {
-    transform: translateY(-8px);
+    transform: translateY(-9px);
 }
 .menu-btn__burger::after {
-    transform: translateY(8px);
+    transform: translateY(9px);
 }
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
