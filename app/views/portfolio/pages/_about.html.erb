@@ -27,12 +27,12 @@
       <div class="flex space-y-6 flex-col sm:flex-row text-muted sm:items-center justify-around">
         <%= render 'portfolio/pages/skills' %>
         <div class="flex justify-center items-center fade-in lg:hidden">
-          <%= image_tag 'pic-with-wiley.jpg', class: "rounded-lg h-60 lg:h-80 object-cover object-center shadow-xl align-center" %>
+          <%= render 'portfolio/pages/about_me_picture' %>
         </div>
       </div>
     </div>
     <div class="hidden lg:flex justify-center items-center fade-in">
-      <%= image_tag 'pic-with-wiley.jpg', class: "rounded-lg h-60 lg:h-80 object-cover object-center shadow-xl align-center" %>
+      <%= render 'portfolio/pages/about_me_picture' %>
     </div>
   </div>
 </div>
