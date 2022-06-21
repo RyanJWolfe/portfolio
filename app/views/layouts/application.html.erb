@@ -20,7 +20,7 @@
     <%= favicon_link_tag 'icons/wolf.ico' %>
   </head>
 
-  <body class="bg-base" data-controller="nav mobile-menu" data-action="click->mobile-menu#hide">
+  <body class="bg-base" data-controller="nav mobile-menu">
     <header id="navbar"
             class="top-0 fixed z-50 w-full"
             style="transition: all 0.3s;"
@@ -28,7 +28,7 @@
       <%= render 'layouts/nav/navbar' %>
     </header>
     <%= render 'layouts/nav/sidebar' %>
-    <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup"
+    <main data-action="wheel@window->nav#onWheel keyup@window->nav#onKeyup  click->mobile-menu#hide"
           class="relative w-full scroll-smooth text-based overflow-auto background-transition">
       <%= yield %>
     </main>
