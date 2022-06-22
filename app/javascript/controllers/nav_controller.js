@@ -80,7 +80,8 @@ export default class extends Controller {
         if (!entry.isIntersecting) {
           return
         } else {
-
+          if (entry.target.classList.contains('fade-in'))
+            return
           setTimeout(() => {
             let textScramble = new TextScramble(entry.target)
             textScramble.setText(entry.target.innerText).then(() => {})

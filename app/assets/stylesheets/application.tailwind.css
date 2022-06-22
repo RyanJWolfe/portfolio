@@ -21,11 +21,13 @@
             /* End theme vars */
             --nav-load-time: 300ms;
             --nav-link-load-time: 400ms;
-            --content-load-delay: calc(var(--nav-load-time) + var(--nav-link-load-time));
-            --content-secondary-load-delay: calc(var(--content-load-delay) + 200ms);
-            --nav-total-load-time: calc(var(--nav-load-time) + var(--nav-link-load-time) + 200ms);
-            --content-long-load-delay: calc(var(--nav-total-load-time) + 100ms);
-            --content-secondary-long-load-delay: calc(var(--nav-total-load-time) + 300ms);
+            --nav-total-load-time: calc(var(--nav-load-time) + var(--nav-link-load-time));
+            --delay-between-content: 300ms;
+            --content-load-delay: calc(var(--nav-total-load-time) + 200ms);
+            --content-long-load-delay: calc(var(--content-load-delay) + var(--delay-between-content));
+            --content-secondary-load-delay: calc(var(--content-long-load-delay) + var(--delay-between-content));
+            --content-secondary-long-load-delay: calc(var(--content-secondary-load-delay) + var(--delay-between-content));
+            --content-tertiary-load-delay: calc(var(--content-secondary-long-load-delay) + var(--delay-between-content));
         }
 
         .theme-dark {

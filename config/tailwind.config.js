@@ -84,6 +84,7 @@ module.exports = {
         'content-load-long': 'content-load 300ms ease-in var(--content-long-load-delay) forwards',
         'content-secondary-load': 'content-load 300ms ease-in var(--content-secondary-load-delay) forwards',
         'content-secondary-load-long': 'content-load 300ms ease-in var(--content-secondary-long-load-delay) forwards',
+        'content-tertiary-load': 'content-load 300ms ease-in var(--content-tertiary-load-delay) forwards',
       },
     },
   },
