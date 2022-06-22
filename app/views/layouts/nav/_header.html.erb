@@ -1,5 +1,5 @@
 <div class="after:bg-primary hover-fade-in">
-  <%= link_to route, class: "#{'animate-nav-link-load opacity-0'}", style: "animation-delay: calc(var(--nav-load-time) + #{delay});" do %>
+  <%= link_to route, class: "#{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--nav-load-time) + #{delay});" do %>
     <div class="flex space-x-2">
       <p class="text-primary font-medium"><%= label %></p>
       <span class="hover:text-primary"><%= title %></span>

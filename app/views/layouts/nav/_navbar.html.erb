@@ -1,12 +1,11 @@
 <div data-nav-target="navbar"  style="transition: padding 0.3s ease-in-out;"
      class="text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20
-            <%= 'animate-nav-load' if current_page? root_path %> ">
+            <%= current_page?(root_path) ? 'animate-nav-load' : 'py-3 md:py-6' %> ">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
-
     <div class="after:bg-primary hover-fade-in <%= 'animate-nav-link-load opacity-0' if current_page? root_path %>"
          style="animation-delay: var(--nav-load-time);">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
-        <%= link_to '#home' do %>
+        <%= link_to root_path(anchor: 'home') do %>
           <%= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>
         <% end %>
       <% end %>
@@ -22,7 +21,7 @@
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
         <%= render 'layouts/nav/header', { label: '03.', title: 'Projects', route: '#projects', delay: '500ms' } %>
       <% end %>
-      <%= link_to 'Contact', '#contact', class: "btn btn-tertiary animate-nav-link-load opacity-0", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
+      <%= link_to 'Contact', contacts_path, class: "btn btn-tertiary #{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
     </div>
 
     <div class="flex space-x-4">

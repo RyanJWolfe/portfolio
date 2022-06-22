@@ -1,0 +1,13 @@
+<div class="mx-auto px-5 pb-10 w-full text-based max-w-md lg:px-10 lg:max-w-6xl mt-20 md:mt-28">
+  <div class="flex flex-col space-y-2 lg:space-y-4">
+    <h2 class="text-center lg:text-6xl md:text-5xl text-4xl font-bold text-based tracking-wide"><%= t("Contact Us") %></h2>
+    <p class="text-center text-muted text-based">We'd love to hear from you!</p>
+  </div>
+
+  <div class="lg:grid lg:grid-cols-12 lg:bg-surface lg:rounded-lg lg:shadow-lg lg:gap-6 lg:my-12 overflow-hidden">
+    <div></div>
+    <div class="lg:col-span-7 lg:p-8">
+      <%= render 'contacts/form' %>
+    </div>
+  </div>
+</div>

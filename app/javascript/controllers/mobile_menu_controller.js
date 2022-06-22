@@ -17,15 +17,18 @@ export default class extends Controller {
   }
 
   setSectionLinkClasses() {
-    if (this.contactInfoInView) {
+    if (!this.hasHomeTarget)
+      return
+
+    if (this.targetInView(this.contactInfoTarget)) {
       this.toggleLinkClasses(this.contactLinkTarget)
-    } else if (this.projectsInView) {
+    } else if (this.targetInView(this.projectsTarget)) {
       this.toggleLinkClasses(this.projectsLinkTarget)
-    } else if (this.experiencesInView) {
+    } else if (this.targetInView(this.experiencesTarget)) {
       this.toggleLinkClasses(this.experiencesLinkTarget)
-    } else if (this.aboutInView) {
+    } else if (this.targetInView(this.aboutTarget)) {
       this.toggleLinkClasses(this.aboutLinkTarget)
-    } else if (this.homeInView) {
+    } else if (this.targetInView(this.homeTarget)) {
       this.toggleLinkClasses(this.homeLinkTarget)
     }
   }
@@ -59,24 +62,10 @@ export default class extends Controller {
       this.dropdownTarget.classList.add('hidden')
   }
 
-  get contactInfoInView() {
-    return isScrolledIntoView(this.contactInfoTarget, true)
-  }
-
-  get projectsInView() {
-    return isScrolledIntoView(this.projectsTarget, true)
-  }
-
-  get experiencesInView() {
-    return isScrolledIntoView(this.experiencesTarget, true)
-  }
-
-  get aboutInView() {
-    return isScrolledIntoView(this.aboutTarget, true)
-  }
-
-  get homeInView() {
-    return isScrolledIntoView(this.homeTarget, true)
+  targetInView(targetEl) {
+    if (targetEl)
+      return isScrolledIntoView(targetEl, true)
+    return false
   }
 
   toggleLinkClasses(targetEl) {

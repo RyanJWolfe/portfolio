@@ -87,6 +87,15 @@
     .accent-text {
         @apply text-primary hover-underline after:bg-primary
     }
+    .is-invalid {
+        @apply border-red-500 border-2
+    }
+    .invalid-feedback {
+        @apply text-red-500 text-sm
+    }
+    .contact-form-text-area {
+        @apply px-3 rounded-lg border border-surface-accent focus:outline-none focus:border-surface-accent focus:ring-2 focus:ring-primary/75 placeholder:italic placeholder:text-muted bg-surface
+    }
 }
 
 @layer utilities {

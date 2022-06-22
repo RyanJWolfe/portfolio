@@ -135,7 +135,9 @@ export default class extends Controller {
   }
 
   get contactInfoInView() {
-    return isScrolledIntoView(this.contactInfoTarget)
+    if (this.hasContactInfoTarget)
+      return isScrolledIntoView(this.contactInfoTarget)
+    return false
   }
 
   get faders() {

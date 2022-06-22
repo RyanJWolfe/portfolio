@@ -4,7 +4,7 @@
     <br/>
     My inbox is always open!
   </p>
-  <%= link_to "Let's Chat", '#contact', class: "fade-in self-center btn btn-primary lg:px-6 lg:py-4"%>
+  <%= link_to "Let's Chat", contacts_path, class: "fade-in self-center btn btn-primary lg:px-6 lg:py-4"%>
   <div data-nav-target="contactInfo" data-mobile-menu-target="contactInfo" class="flex space-x-12 py-2 md:py-5 fade-in">
     <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to 'https://github.com/RyanJWolfe', :target => '_blank', class: "text-gray-900 dark:text-gray-400 hover:text-purple-700 dark:hover:text-purple-400" do %>
