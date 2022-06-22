@@ -80,8 +80,6 @@ export default class extends Controller {
   toggleLinkClasses(targetEl) {
     let elements = [this.contactLinkTarget, this.aboutLinkTarget, this.homeLinkTarget,
                     this.experiencesLinkTarget, this.projectsLinkTarget]
-    console.log(this.homeLinkTarget)
-    console.log(elements)
     for (let i = 0; i < elements.length; ++i) {
       if (targetEl == elements[i]) {
         this.addClasses(targetEl)
