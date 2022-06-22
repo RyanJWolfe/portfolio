@@ -1,11 +1,11 @@
-<div data-nav-target="contactInfo" class="flex flex-col space-y-12 items-center">
+<div class="flex flex-col space-y-12 items-center">
   <p class="fade-in self-start tracking-wider text-gray-600 dark:text-gray-400 text-base lg:text-lg w-full">
     Have a question, business inquiry, or just want to say hello?
     <br/>
     My inbox is always open!
   </p>
   <%= link_to "Let's Chat", '#contact', class: "fade-in self-center btn btn-primary lg:px-6 lg:py-4"%>
-  <div class="flex space-x-12 py-2 md:py-5 fade-in">
+  <div data-nav-target="contactInfo" data-mobile-menu-target="contactInfo" class="flex space-x-12 py-2 md:py-5 fade-in">
     <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to 'https://github.com/RyanJWolfe', :target => '_blank', class: "text-gray-900 dark:text-gray-400 hover:text-purple-700 dark:hover:text-purple-400" do %>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">

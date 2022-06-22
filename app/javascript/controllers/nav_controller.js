@@ -3,7 +3,8 @@ import TextScramble from "../helpers/text_scramble"
 import { isScrolledIntoView } from "../helpers/scrolled_into_view"
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar", "sideMenu", "contactLink"]
+  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar",
+                    "sideMenu", "contactLink", "projectsLink", "projects"]
 
   initialize() {
     // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
@@ -30,11 +31,6 @@ export default class extends Controller {
     })
 
     window.onscroll = (e) => {
-      if (this.contactInfoInView) {
-        this.contactLinkTarget.classList.add("py-1.5", "pr-3", "border-r-4", "border-purple-700", "dark:border-purple-400", "text-purple-700", "dark:text-purple-400", "font-semibold")
-      } else {
-        this.contactLinkTarget.classList.remove("py-1.5", "pr-3", "border-r-4", "border-purple-700", "dark:border-purple-400", "text-purple-700", "dark:text-purple-400", "font-semibold")
-      }
       let scrolledDown = this.oldScroll < this.scrollTop
       if (scrolledDown) {
         this.hideNavbar()
