@@ -82,11 +82,10 @@ export default class extends Controller {
         } else {
           if (entry.target.classList.contains('fade-in'))
             return
-          setTimeout(() => {
-            let textScramble = new TextScramble(entry.target)
-            textScramble.setText(entry.target.innerText).then(() => {})
-            appearOnScroll.unobserve(entry.target)
-          }, 300)
+          let textScramble = new TextScramble(entry.target)
+          textScramble.setText(entry.target.innerText).then(() => {})
+          entry.target.classList.add('start-scramble')
+          appearOnScroll.unobserve(entry.target)
         }
       })
     }, appearOptions)

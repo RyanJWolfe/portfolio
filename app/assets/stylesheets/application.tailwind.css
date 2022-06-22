@@ -42,8 +42,8 @@
             --color-secondary: 21, 21, 21;
             --color-secondary-hover: 33, 33, 33;
             --color-secondary-press: 10, 10, 10;
-            --color-bg-surface: 30, 31, 34;                 /* dark color */
-            --color-bg-surface-accent: 64, 64, 64;
+            --color-bg-surface: 31, 41, 55;                 /* dark color */
+            --color-bg-surface-accent: 55, 65, 81;
         }
     }
 }

@@ -53,3 +53,15 @@
     opacity: 1;
     transform: translate(0, 0);
 }
+
+.scramble {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 500ms;
+    transform: translate(-2vh, 0);
+}
+
+.scramble.start-scramble {
+    opacity: 1;
+    transform: translate(0, 0);
+}
