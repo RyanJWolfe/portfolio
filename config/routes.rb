@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
-  resources :contacts, only: [:index, :create]
+  # root "articles#new"
+  get '/contact', to: 'contacts#new'
+  get '/contact/success', to: 'contacts#index'
+  post '/contact', to: 'contacts#create'
 end

@@ -50,7 +50,7 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
+        @apply inline-block px-5 py-3 rounded outline-none tracking-widest font-medium text-sm sm:text-base text-based
     }
     .btn:focus {
         @apply outline-none ring ring-offset-2
@@ -88,13 +88,13 @@
         @apply text-primary hover-underline after:bg-primary
     }
     .is-invalid {
-        @apply border-red-500 border-2
+        @apply border-red-500
     }
     .invalid-feedback {
         @apply text-red-500 text-sm
     }
     .contact-form-text-area {
-        @apply px-3 rounded-lg border border-surface-accent focus:outline-none focus:border-surface-accent focus:ring-2 focus:ring-primary/75 placeholder:italic placeholder:text-muted bg-surface
+        @apply px-1 py-2 bg-base w-full border-b-2 focus:outline-none focus:border-primary text-area-transition
     }
 }
 
@@ -144,4 +144,16 @@
     .color-transition {
         transition: color 300ms ease-in-out;
     }
+
+    .text-area-transition {
+        transition: border-bottom 500ms ease-in-out, padding 500ms ease-out;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: all 10000s ease-in-out 0s;
+    }
+
 }
