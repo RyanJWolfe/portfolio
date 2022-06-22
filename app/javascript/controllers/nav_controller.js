@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
-import TextScramble from "../helpers/text_scramble"
-import { isScrolledIntoView } from "../helpers/scrolled_into_view"
+import TextScramble from "helpers/text_scramble"
+import { isScrolledIntoView } from "helpers/scrolled_into_view"
 // Connects to data-controller="navbar"
 export default class extends Controller {
   static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar",

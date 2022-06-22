@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import { isScrolledIntoView } from "../helpers/scrolled_into_view"
+import { isScrolledIntoView } from "helpers/scrolled_into_view"
 
 export default class extends Controller {
   static targets = ["dropdown", "menuBtn", "contactInfo", "contactLink", "projectsLink", "projects",
