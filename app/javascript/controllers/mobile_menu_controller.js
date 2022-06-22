@@ -7,7 +7,8 @@ export default class extends Controller {
 
   initialize() {
     window.addEventListener('scroll', (e) => {
-      this.setSectionLinkClasses()
+      if (this.sideMenuOpen)
+        this.setSectionLinkClasses()
     })
   }
   connect() {
@@ -47,6 +48,7 @@ export default class extends Controller {
   }
 
   open() {
+    this.setSectionLinkClasses()
     this.menuBtnTarget.classList.add('open')
     this.dropdownTarget.style.right = '0'
     this.sideMenuOpen = true
