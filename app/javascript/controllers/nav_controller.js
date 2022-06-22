@@ -7,27 +7,12 @@ export default class extends Controller {
                     "sideMenu", "contactLink", "projectsLink", "projects"]
 
   initialize() {
-    // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
-    const appearOptions = {}
-    const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return
-        } else {
-          if (entry.target.classList.contains('scramble')) {
-            let textScramble = new TextScramble(entry.target)
-            textScramble.setText(entry.target.innerText).then(() => {})
-          }
-          setTimeout(() => {
-            entry.target.classList.add('appear')
-            appearOnScroll.unobserve(entry.target)
-          }, 100)
-        }
-      })
-    }, appearOptions)
-
     this.faders.forEach(fader => {
-      appearOnScroll.observe(fader)
+      this.fadeInObserver().observe(fader)
+    })
+
+    this.scramblers.forEach(scrambler => {
+      this.scrambleObserver().observe(scrambler)
     })
 
     window.onscroll = (e) => {
@@ -64,6 +49,46 @@ export default class extends Controller {
     } else if (e.key === "ArrowDown" || e.key === ' ') {
       this.hideNavbar()
     }
+  }
+
+  fadeInObserver() {
+    // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
+
+    const appearOptions = {}
+    return new IntersectionObserver((entries, appearOnScroll) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return
+        } else {
+          if (entry.target.classList.contains('scramble')) {
+            let textScramble = new TextScramble(entry.target)
+            textScramble.setText(entry.target.innerText).then(() => {})
+          }
+          setTimeout(() => {
+            entry.target.classList.add('appear')
+            appearOnScroll.unobserve(entry.target)
+          }, 100)
+        }
+      })
+    }, appearOptions)
+  }
+
+  scrambleObserver() {
+    const appearOptions = {}
+    return new IntersectionObserver((entries, appearOnScroll) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return
+        } else {
+
+          setTimeout(() => {
+            let textScramble = new TextScramble(entry.target)
+            textScramble.setText(entry.target.innerText).then(() => {})
+            appearOnScroll.unobserve(entry.target)
+          }, 300)
+        }
+      })
+    }, appearOptions)
   }
 
   showNavbar() {
@@ -114,6 +139,10 @@ export default class extends Controller {
 
   get faders() {
     return document.querySelectorAll(".fade-in")
+  }
+
+  get scramblers() {
+    return document.querySelectorAll(".scramble")
   }
 
   get scrollTop() {
