@@ -10,9 +10,9 @@ class Contact < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      subject: 'Contact Form Inquiry',
+      subject: "Contact Form Inquiry #{%("#{name}" <#{email}>)}",
       to: ENV['CONTACT_EMAIL_RECIPIENT'],
-      from: %("#{name}" <#{email}>)
+      from: ENV['CONTACT_EMAIL_RECIPIENT']
     }
   end
 end
