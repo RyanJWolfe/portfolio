@@ -29,7 +29,8 @@
             --content-secondary-long-load-delay: calc(var(--content-secondary-load-delay) + var(--delay-between-content));
             --content-tertiary-load-delay: calc(var(--content-secondary-long-load-delay) + var(--delay-between-content));
             /* height screen minus footer */
-            --screen-minus-footer: calc(100vh - 80px);
+            --screen-minus-footer: calc(100vh - 160px);
+            --screen-minus-footer-large: calc(100vh - 192px);
         }
 
         .theme-dark {
@@ -97,6 +98,9 @@
     }
     .contact-form-text-area {
         @apply px-1 py-2 bg-base w-full border-b-2 border-based focus:outline-none focus:border-primary text-area-transition
+    }
+    .min-h-with-footer {
+        @apply min-h-screen-footer md:min-h-screen-footer-large
     }
 }
 

@@ -31,6 +31,7 @@ module.exports = {
       },
       minHeight: {
         'screen-footer': 'var(--screen-minus-footer)',
+        'screen-footer-large': 'var(--screen-minus-footer-large)',
       },
       colors: {
         based: withOpacity('--color-text-based'),
