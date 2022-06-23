@@ -31,6 +31,7 @@
     <main data-action="keyup@window->nav#onKeyup click->mobile-menu#hide"
           class="relative w-full text-based overflow-auto background-transition">
       <%= yield %>
+      <%= render 'layouts/nav/footer' %>
     </main>
   </body>
 </html>

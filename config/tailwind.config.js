@@ -21,6 +21,17 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      height: {
+        'vh50': '50vh',
+        'vh60': '60vh',
+        'vh75': '75vh',
+        'vh80': '80vh',
+        'vh90': '90vh',
+        'vh95': '95vh',
+      },
+      minHeight: {
+        'screen-footer': 'var(--screen-minus-footer)',
+      },
       colors: {
         based: withOpacity('--color-text-based'),
         'based-hover': withOpacity('--color-text-based-hover'),

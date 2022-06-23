@@ -46,7 +46,7 @@
     opacity: 0;
     transition-property: opacity, transform;
     transition-duration: 1s;
-    transform: translate(0, 5vh);
+    transform: translate(0, 24px);
 }
 
 .fade-in.appear {
@@ -58,7 +58,7 @@
     opacity: 0;
     transition-property: opacity, transform;
     transition-duration: 500ms;
-    transform: translate(-2vh, 0);
+    transform: translate(0, 0);
 }
 
 .scramble.start-scramble {

@@ -1,7 +1,7 @@
 <%= form_for @contact, url: contact_path, method: :post do |f| %>
   <% invalid = @contact.errors.include?(:name) %>
   <div class="py-3 space-y-2">
-    <%= f.text_field :name, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface'}" , placeholder: "Name" %>
+    <%= f.text_field :name, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}" , placeholder: "Name" %>
     <% if invalid %>
       <div class="invalid-feedback">
         <%= @contact.errors.full_messages_for(:name).each do |error_message| %>
@@ -13,7 +13,7 @@
 
   <% invalid = @contact.errors.include?(:email) %>
   <div class="py-3 space-y-2">
-    <%= f.text_field :email, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface'}", placeholder: "Email" %>
+    <%= f.text_field :email, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}", placeholder: "Email" %>
     <% if invalid %>
       <div class="invalid-feedback">
         <%= @contact.errors.full_messages_for(:email).join(', ') %>
@@ -23,7 +23,7 @@
 
   <% invalid = @contact.errors.include?(:message) %>
   <div class="py-3 space-y-2">
-    <%= f.text_area :message, rows: 8, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface'}",
+    <%= f.text_area :message, rows: 8, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}",
                     placeholder: "Send me a message!"%>
     <% if invalid %>
       <div class="invalid-feedback">
