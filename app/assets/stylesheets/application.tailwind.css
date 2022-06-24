@@ -31,7 +31,7 @@
             --content-tertiary-load-delay: calc(var(--content-secondary-long-load-delay) + var(--delay-between-content));
             /* height screen minus footer */
             --screen-minus-footer: calc(100vh - 160px);
-            --screen-minus-footer-large: calc(100vh - 192px);
+            --screen-minus-footer-large: calc(100vh - 200px);
         }
 
         .theme-dark {

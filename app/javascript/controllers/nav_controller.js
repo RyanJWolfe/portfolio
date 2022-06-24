@@ -108,13 +108,13 @@ export default class extends Controller {
   addOrRemoveShadow() {
     if (this.scrollTop < 5) {
       this.headerTarget.classList.remove("shadow-lg")
-      this.navbarTarget.classList.remove("py-1.5", "md:py-3")
-      this.navbarTarget.classList.add("py-4", "md:py-8")
+      this.navbarTarget.classList.remove("py-2", "md:py-4")
+      this.navbarTarget.classList.add("py-4", "md:py-6", "lg:py-8")
     }
     else {
       this.headerTarget.classList.add("shadow-lg")
       this.navbarTarget.classList.add("py-2", "md:py-4")
-      this.navbarTarget.classList.remove("py-4", "md:py-8")
+      this.navbarTarget.classList.remove("py-4", "md:py-6", "lg:py-8")
     }
   }
 
