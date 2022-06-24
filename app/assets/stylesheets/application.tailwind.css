@@ -7,7 +7,7 @@
         :root {
             --color-text-based: 0, 0, 0;       /* black */
             --color-text-primary: 168, 85, 247;              /* purple-500 */
-            --color-text-muted: 117, 117, 117;         /* gray-700 */
+            --color-text-muted: 110, 110, 110;         /* gray-700 */
             --color-text-based-hover: 150, 150, 150;
             --color-text-inverted: 225, 225, 225;
             --color-bg: 245, 245, 245;                 /* off-white */
