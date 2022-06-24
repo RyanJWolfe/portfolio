@@ -6,6 +6,7 @@
     @layer base {
         :root {
             --color-text-based: 0, 0, 0;       /* black */
+            --color-text-primary: 168, 85, 247;              /* purple-500 */
             --color-text-muted: 117, 117, 117;         /* gray-700 */
             --color-text-based-hover: 150, 150, 150;
             --color-text-inverted: 225, 225, 225;
@@ -35,6 +36,7 @@
 
         .theme-dark {
             --color-text-based: 225, 225, 225;       /* off-white */
+            --color-text-primary: 192, 132, 252;       /* purple-400 */
             --color-text-muted: 160, 160, 160;
             --color-text-based-hover: 255, 255, 255;
             --color-text-inverted: 18, 18, 18;

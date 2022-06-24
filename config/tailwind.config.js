@@ -51,7 +51,7 @@ module.exports = {
         based: withOpacity('--color-text-based'),
         muted: withOpacity('--color-text-muted'),
         inverted: withOpacity('--color-text-inverted'),
-        primary: withOpacity('--color-primary'),
+        primary: withOpacity('--color-text-primary'),
       },
       backgroundColor: {
         base: withOpacity('--color-bg'),
