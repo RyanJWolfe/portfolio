@@ -1,10 +1,13 @@
 <div class="w-full h-full justify-between items-center">
 
-  <div class="grid lg:grid-cols-2 gap-y-12 mt-4">
-    <div class="space-y-6">
+  <div class="grid lg:grid-cols-12 gap-y-12 mt-4">
+    <div class="space-y-6 lg:col-span-7">
       <%= render 'portfolio/pages/section_header', { label: "01", title: "About Me"}%>
-      <div class="flex flex-col space-y-4 text-muted text-base md:text-lg text-left">
-        <p class="fade-in">Hello! My name is Ryan, I am a full-stack software engineer with a passion for learning and solving problems.</p>
+      <div class="flex flex-col space-y-4 text-muted text-base sm:text-lg md:text-xl text-left">
+        <p class="fade-in">
+          Hello! My name is Ryan, I am a full-stack software engineer with a passion for learning and solving problems.
+          I've been a huge computer guy my whole life, and programming was something I was naturally drawn to.
+        </p>
         <p class="fade-in">
           I began my career doing low-level programming with
           <span>
@@ -13,7 +16,7 @@
           <span>
             <%= link_to 'systems', 'https://gdmissionsystems.com/products/cross-domain-solutions/tacds-tactical-cross-domain-solution', target: '_blank', class: "accent-text" %>.
           </span>
-          After a few years I transitioned to web development, where I found a passion for building digital experiences.
+          After a few years I transitioned to web development, where I found an interest in building digital experiences.
         </p>
         <p class="fade-in" data-mobile-menu-target="about">
           Currently, I am a senior software development engineer at
@@ -24,14 +27,14 @@
           I also do freelance work, where I help people bring their ideas to life on the web.
         </p>
       </div>
-      <div class="flex space-y-6 flex-col sm:flex-row text-muted sm:items-center justify-around">
+      <div class="text-muted grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:flex">
         <%= render 'portfolio/pages/skills' %>
         <div class="flex justify-center items-center fade-in lg:hidden">
           <%= render 'portfolio/pages/about_me_picture' %>
         </div>
       </div>
     </div>
-    <div class="hidden lg:flex justify-center items-center fade-in">
+    <div class="hidden lg:flex justify-center lg:col-span-5 items-center fade-in">
       <%= render 'portfolio/pages/about_me_picture' %>
     </div>
   </div>
