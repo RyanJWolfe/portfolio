@@ -3,7 +3,7 @@ import { isScrolledIntoView } from "helpers/scrolled_into_view"
 
 export default class extends Controller {
   static targets = ["dropdown", "menuBtn", "contactInfo", "contactLink", "projectsLink", "projects",
-                    "experiences", "experiencesLink", "about", "aboutLink", "home", "homeLink"]
+                    "hire", "hireLink", "about", "aboutLink", "home", "homeLink"]
 
   initialize() {
     window.addEventListener('scroll', (e) => {
@@ -24,8 +24,8 @@ export default class extends Controller {
       this.toggleLinkClasses(this.contactLinkTarget)
     } else if (this.targetInView(this.projectsTarget)) {
       this.toggleLinkClasses(this.projectsLinkTarget)
-    } else if (this.targetInView(this.experiencesTarget)) {
-      this.toggleLinkClasses(this.experiencesLinkTarget)
+    } else if (this.targetInView(this.hireTarget)) {
+      this.toggleLinkClasses(this.hireLinkTarget)
     } else if (this.targetInView(this.aboutTarget)) {
       this.toggleLinkClasses(this.aboutLinkTarget)
     } else if (this.targetInView(this.homeTarget)) {
@@ -70,7 +70,7 @@ export default class extends Controller {
 
   toggleLinkClasses(targetEl) {
     let elements = [this.contactLinkTarget, this.aboutLinkTarget, this.homeLinkTarget,
-                    this.experiencesLinkTarget, this.projectsLinkTarget]
+                    this.hireLinkTarget, this.projectsLinkTarget]
     for (let i = 0; i < elements.length; ++i) {
       if (targetEl == elements[i]) {
         this.addClasses(targetEl)

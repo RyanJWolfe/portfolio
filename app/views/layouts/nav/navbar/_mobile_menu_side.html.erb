@@ -13,14 +13,14 @@
                   'data-mobile-menu-target': 'aboutLink' %>
     </li>
     <li class="py-2">
-      <%= link_to 'Experience', root_path(anchor: 'experience'),
-                  class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
-                 'data-mobile-menu-target': 'experiencesLink'%>
-    </li>
-    <li class="py-2">
       <%= link_to 'Projects', root_path(anchor: 'projects'),
                   class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
                   'data-mobile-menu-target': 'projectsLink' %>
+    </li>
+    <li class="py-2">
+      <%= link_to 'Experience', root_path(anchor: 'hire-me'),
+                  class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
+                 'data-mobile-menu-target': 'hireLink'%>
     </li>
     <li class="py-2" >
       <%= link_to 'Contact', contact_path,
