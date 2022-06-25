@@ -1,6 +1,6 @@
-<div class="fade-in flex flex-col space-y-6" data-mobile-menu-target="hire">
+<div class="flex flex-col space-y-6" data-mobile-menu-target="hire">
   <%= render 'portfolio/pages/section_header', { label: "03", title: "Hire Me"} %>
-  <div class="flex flex-col space-y-4 text-left">
+  <div class="flex flex-col space-y-4 text-left fade-in">
     <h3 class="text-based font-semibold text-xl sm:text-2xl">I offer freelance web design and development services.</h3>
     <p class="text-muted">
       Whether or not you already have a vision in mind, I can work with your needs to create a web application that will
@@ -9,18 +9,18 @@
     <p class="text-muted">
       Everything I develop is <span class="text-primary">custom built</span> from scratch, ensuring your deliverable will be truly unique.
     </p>
-    <ul class="flex flex-col space-y-4 py-6">
-      <li class=""><span class="text-primary mr-2">&#62;</span> Responsive, Accessible, and Scalable Web Applications</li>
-      <li class=""><span class="text-primary mr-2">&#62;</span> E-Commerce</li>
-      <li class=""><span class="text-primary mr-2">&#62;</span> Database Design and Management</li>
-      <li class=""><span class="text-primary mr-2">&#62;</span> Deployment and Server Management</li>
-      <li class=""><span class="text-primary mr-2">&#62;</span> Domain Management</li>
-    </ul>
-    <div class="flex space-x-2">
-      <p class="font-semibold">Ready to collaborate? </p>
-      <%= link_to 'Send me a message!', contact_path, class: 'accent-text' %>
-    </div>
 
+  </div>
+  <ul class="flex flex-col space-y-4 py-6 fade-in">
+    <li class=""><span class="text-primary mr-2">&#62;</span> Responsive, Accessible, and Scalable Web Applications</li>
+    <li class=""><span class="text-primary mr-2">&#62;</span> E-Commerce</li>
+    <li class=""><span class="text-primary mr-2">&#62;</span> Database Design and Management</li>
+    <li class=""><span class="text-primary mr-2">&#62;</span> Deployment and Server Management</li>
+    <li class=""><span class="text-primary mr-2">&#62;</span> Domain Management</li>
+  </ul>
+  <div class="flex space-x-2 fade-in">
+    <p class="font-semibold">Ready to collaborate? </p>
+    <%= link_to 'Send me a message!', contact_path, class: 'accent-text' %>
   </div>
   </div>
 
