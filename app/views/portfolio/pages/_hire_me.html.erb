@@ -1,7 +1,8 @@
 <div class="flex flex-col space-y-6 fade-in">
   <%= render 'portfolio/pages/section_header', { label: "03", title: "Hire Me"} %>
+
   <div class="flex flex-col space-y-4 text-left">
-    <h2 class="text-based text-xl sm:text-2xl font-poppins font-bold">I offer freelance web design and development services.</h2>
+    <h2 class="text-based text-xl sm:text-2xl font-poppins font-bold">Freelance web design and development.</h2>
     <p class="text-muted">
       Whether or not you already have a vision in mind, I can work with your needs to create a web application that will
       <span class="text-primary">delight</span> its users.
@@ -9,18 +10,21 @@
     <p class="text-muted" data-mobile-menu-target="hire">
       Everything I develop is <span class="text-primary">custom built</span> from scratch, ensuring your deliverable will be truly unique.
     </p>
-
   </div>
-  <ul class="flex flex-col space-y-4 py-6">
-    <li class=""><span class="text-primary mr-2">&#62;</span> Responsive, Accessible, and Scalable Web Applications</li>
-    <li class=""><span class="text-primary mr-2">&#62;</span> E-Commerce</li>
-    <li class=""><span class="text-primary mr-2">&#62;</span> Database Design and Management</li>
-    <li class=""><span class="text-primary mr-2">&#62;</span> Deployment and Server Management</li>
-    <li class=""><span class="text-primary mr-2">&#62;</span> Domain Management</li>
-  </ul>
+
+  <div class="flex flex-col space-y-4 text-left">
+    <h2 class="text-xl sm:text-2xl font-poppins font-bold">Services I offer.</h2>
+    <ul class="flex flex-col space-y-2 text-muted">
+      <%= render 'portfolio/pages/services_list_item', description: 'Responsive, Accessible, and Scalable Web Applications' %>
+      <%= render 'portfolio/pages/services_list_item', description: 'E-Commerce' %>
+      <%= render 'portfolio/pages/services_list_item', description: 'Database Design and Management' %>
+      <%= render 'portfolio/pages/services_list_item', description: 'Deployment and Server Management' %>
+      <%= render 'portfolio/pages/services_list_item', description: 'Domain Management' %>
+    </ul>
+  </div>
   <div class="flex flex-col space-y-2 items-center justify-center">
-    <h3 class="font-poppins font-bold text-lg sm:text-xl">Ready to collaborate? </h3>
-    <%= link_to 'Send me a message!', contact_path, class: 'accent-text' %>
+    <h3 class="font-poppins font-bold text-xl sm:text-2xl">Ready to collaborate? </h3>
+    <%= link_to 'Send me a message!', contact_path, class: 'accent-text text-lg' %>
   </div>
   </div>
 
