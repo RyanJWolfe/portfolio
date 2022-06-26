@@ -102,7 +102,7 @@
         @apply link-primary text-muted hover:text-based-hover
     }
     .accent-text {
-        @apply text-primary hover-underline after:bg-primary
+        @apply text-primary hover-underline after:bg-primary hover:text-primary-hover active:text-primary-press active:after:bg-primary-press
     }
     .is-invalid {
         @apply border-red-500
