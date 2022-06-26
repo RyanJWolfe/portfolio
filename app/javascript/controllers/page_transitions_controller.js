@@ -16,7 +16,8 @@ export default class extends Controller {
 
       anchor.addEventListener('click', e => {
         let target = anchor.getAttribute('href')
-        if (!target.includes("#")) {
+        console.log(target)
+        if (!target.includes("#") && !target.includes(".com")) {
           e.preventDefault();
 
           this.pageTransitionTarget.classList.add('is-active')
