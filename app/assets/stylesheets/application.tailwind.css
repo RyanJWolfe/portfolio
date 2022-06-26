@@ -21,7 +21,7 @@
             --color-bg-surface-accent: 200, 200, 200;
             --color-page-transition: 200, 200, 200;
             /* End theme vars */
-            --page-transition-duration: 700ms;
+            --page-transition-duration: 500ms;
             --nav-load-delay: var(--page-transition-duration);
             --nav-load-time: 500ms;
             --nav-link-load-time: 400ms;
@@ -34,7 +34,7 @@
             --content-tertiary-load-delay: calc(var(--content-secondary-long-load-delay) + var(--delay-between-content));
             /* height screen minus footer */
             --screen-minus-footer: calc(100vh - 160px);
-            --screen-minus-footer-large: calc(100vh - 200px);
+            --screen-minus-footer-large: calc(100vh - 212px);
         }
 
         .theme-dark {
