@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         lora: 'Lora',
+        poppins: 'Poppins',
       },
       height: {
         'vh50': '50vh',
