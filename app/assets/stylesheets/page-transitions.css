@@ -6,7 +6,7 @@
     height: 100%;
     z-index: 101;
     background-color: rgb(var(--color-page-transition));
-    transition: bottom 0.5s ease-out;
+    transition: bottom var(--page-transition-duration) cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .page-transition-1.is-active {
@@ -21,7 +21,7 @@
     bottom: 0;
     z-index: 101;
     background-color: rgb(var(--color-page-transition));
-    transition: right 0.5s ease-out;
+    transition: right var(--page-transition-duration) cubic-bezier(0.76, 0, 0.24, 1) ;
 }
 
 .page-transition-2.is-active {
