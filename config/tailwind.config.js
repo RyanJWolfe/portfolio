@@ -20,7 +20,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        lora: 'Lora',
         poppins: 'Poppins',
       },
       height: {

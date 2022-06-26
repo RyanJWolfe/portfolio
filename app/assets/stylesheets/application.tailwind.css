@@ -4,16 +4,6 @@
 
 @layer base {
     @font-face {
-        font-family: 'Lora';
-        font-weight: 700;
-        src: url('Lora-VariableFont_wght.ttf')
-    }
-    @font-face {
-        font-family: 'Lora';
-        font-weight: 400;
-        src: url('Lora-VariableFont_wght.ttf')
-    }
-    @font-face {
         font-family: 'Poppins';
         font-weight: 700;
         src: url('Poppins-SemiBold.ttf')
