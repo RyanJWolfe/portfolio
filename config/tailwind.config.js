@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        lora: 'Lora',
       },
       height: {
         'vh50': '50vh',
