@@ -90,8 +90,8 @@ module.exports = {
         },
       },
       animation: {
-        'nav-load': 'nav-load var(--nav-load-time) ease-in',
-        'nav-link-load': 'nav-link-load var(--nav-link-load-time) ease-in forwards',
+        'nav-load': 'nav-load var(--nav-load-time) ease-in var(--nav-load-delay) forwards',
+        'nav-link-load': 'nav-link-load var(--nav-link-load-time) ease-in var(--nav-load-delay) forwards',
         'content-load': 'content-load 300ms ease-in var(--content-load-delay) forwards',
         'content-load-long': 'content-load 300ms ease-in var(--content-long-load-delay) forwards',
         'content-secondary-load': 'content-load 300ms ease-in var(--content-secondary-load-delay) forwards',

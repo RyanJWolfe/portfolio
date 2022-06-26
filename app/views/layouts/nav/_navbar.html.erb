@@ -1,9 +1,7 @@
 <div data-nav-target="navbar"  style="transition: padding 0.3s ease-in-out;"
-     class="text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20
-            <%= current_page?(root_path) ? 'animate-nav-load' : 'py-4 md:py-8' %> ">
+     class="text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20 py-4 md:py-8">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
-    <div class="after:bg-primary hover-fade-in <%= 'animate-nav-link-load opacity-0' if current_page? root_path %>"
-         style="animation-delay: var(--nav-load-time);">
+    <div class="after:bg-primary hover-fade-in">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
         <%= link_to root_path do %>
           <%= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>
