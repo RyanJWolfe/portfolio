@@ -5,6 +5,7 @@ export default class extends Controller {
   static targets = ["pageTransition"]
 
   connect() {
+    console.log("connect")
     const anchors = document.getElementsByTagName('a');
 
     setTimeout(() => {
@@ -15,9 +16,16 @@ export default class extends Controller {
       const anchor = anchors[i]
 
       anchor.addEventListener('click', e => {
-        let target = e.target.href;
-        if (e.target.href != null) {
+        let target = anchor.getAttribute('href')
+        console.log(target)
+        console.log(window.location.hash)
+        console.log(window.location.host)
+        console.log(window.location.href)
+        if (!target.includes("#")) {
           e.preventDefault();
+
+          this.pageTransitionTarget.classList.add('is-active')
+
           setTimeout(() => {
             window.location.href = target;
           }, 500)

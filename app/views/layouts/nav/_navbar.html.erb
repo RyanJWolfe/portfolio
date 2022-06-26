@@ -5,7 +5,7 @@
     <div class="after:bg-primary hover-fade-in <%= 'animate-nav-link-load opacity-0' if current_page? root_path %>"
          style="animation-delay: var(--nav-load-time);">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
-        <%= link_to root_path(anchor: 'home') do %>
+        <%= link_to root_path do %>
           <%= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>
         <% end %>
       <% end %>
