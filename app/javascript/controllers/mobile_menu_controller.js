@@ -47,10 +47,20 @@ export default class extends Controller {
       this.menuBtnTarget.classList.remove('open')
       this.dropdownTarget.style.right = '-100%'
       this.sideMenuOpen = false
+      let fadeInElements = document.getElementsByClassName('side-menu-fade-in')
+      for (let i = 0; i < fadeInElements.length; i++) {
+        let el = fadeInElements[i]
+        el.classList.remove('appear')
+      }
     }
   }
 
   open() {
+    let fadeInElements = document.getElementsByClassName('side-menu-fade-in')
+    for (let i = 0; i < fadeInElements.length; i++) {
+      let el = fadeInElements[i]
+      el.classList.add('appear')
+    }
     this.setSectionLinkClasses()
     this.menuBtnTarget.classList.add('open')
     this.dropdownTarget.style.right = '0'
@@ -68,6 +78,7 @@ export default class extends Controller {
     return false
   }
 
+  // For determining which link item is the current place on the page
   toggleLinkClasses(targetEl) {
     let elements = [this.contactLinkTarget, this.aboutLinkTarget, this.homeLinkTarget,
                     this.hireLinkTarget, this.projectsLinkTarget]

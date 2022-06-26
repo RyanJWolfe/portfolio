@@ -2,33 +2,30 @@
      data-mobile-menu-target="dropdown"
      class="-right-full w-7/12 px-6 sm:px-8 md:px-16 lg:px-20 h-screen absolute top-0
             bg-gradient-to-bl from-bg-base to-neutral-300 dark:to-gray-800 shadow-xl dark:shadow-neutral-900
-            space-y-10 transition-[right] ease-in-out duration-500" id="mobile-menu">
-  <ul class="w-full tracking-wider text-right text-lg md:text-xl rounded space-y-2 md:space-y-6 py-32 whitespace-nowrap">
-    <li class="py-2">
+            space-y-8 sm:space-y-10 transition-[right] ease-in-out duration-500" id="mobile-menu">
+  <ul class="w-full tracking-wider text-right text-lg md:text-xl rounded space-y-2 md:space-y-6 pt-32 pb-10 whitespace-nowrap">
+    <li class="py-2 side-menu-fade-in" style="transition-delay: 100ms;">
       <%= link_to 'Home', root_path, 'data-mobile-menu-target': 'homeLink' %>
     </li>
-    <li class="py-2">
+    <li class="py-2 side-menu-fade-in" style="transition-delay: 250ms;">
       <%= link_to 'About', root_path(anchor: 'about'),
-                  class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
                   'data-mobile-menu-target': 'aboutLink' %>
     </li>
-    <li class="py-2">
+    <li class="py-2 side-menu-fade-in" style="transition-delay: 400ms;">
       <%= link_to 'Projects', root_path(anchor: 'projects'),
-                  class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
                   'data-mobile-menu-target': 'projectsLink' %>
     </li>
-    <li class="py-2">
+    <li class="py-2 side-menu-fade-in" style="transition-delay: 550ms;">
       <%= link_to 'Hire', root_path(anchor: 'hire-me'),
-                  class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if false}",
-                 'data-mobile-menu-target': 'hireLink'%>
+                 'data-mobile-menu-target': 'hireLink' %>
     </li>
-    <li class="py-2" >
+    <li class="py-2 side-menu-fade-in" style="transition-delay: 700ms;">
       <%= link_to 'Contact', contact_path,
                   class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if current_page? contact_path }",
                   'data-mobile-menu-target': 'contactLink' %>
     </li>
   </ul>
-  <div class="flex w-full justify-around fade-in sm:hidden">
+  <div class="flex w-full justify-around" style="transition-delay: 850ms;">
     <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
       <%= link_to 'https://github.com/RyanJWolfe', :target => '_blank', class: "text-gray-900 dark:text-gray-400 hover:text-purple-700 dark:hover:text-purple-400" do %>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">

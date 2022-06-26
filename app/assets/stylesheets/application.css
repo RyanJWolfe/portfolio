@@ -54,6 +54,19 @@
     transform: translate(0, 0);
 }
 
+.side-menu-fade-in {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 750ms;
+    transition-delay: 500ms;
+    transform: translateY(6vh);
+}
+
+.side-menu-fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .scramble {
     opacity: 0;
     transition-property: opacity, transform;
