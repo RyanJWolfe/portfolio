@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
+# Send email via contact form
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
   end
 
-  def index
-  end
-
+  def index; end
 
   def create
     @contact = Contact.new(contacts_params)
