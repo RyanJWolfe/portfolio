@@ -1,5 +1,5 @@
 <div data-nav-target="navbar"  style="transition: padding 0.3s ease-in-out;"
-     class="text-based tracking-wider px-6 sm:px-8 md:px-16 lg:px-20 py-4 md:py-8">
+     class="text-based tracking-wider px-6 sm:px-8 md:px-16 py-4 md:py-8">
   <div class="flex justify-between xl:justify-around items-center mx-auto">
     <div class="after:bg-primary hover-fade-in">
       <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-1" } do %>
@@ -8,25 +8,25 @@
             <h2 class="font-poppins font-bold text-lg md:text-2xl">Ryan</h2>
             <h2 class="font-poppins font-bold text-lg md:text-2xl text-bg-base bg-primary py-0.5 px-2">Wolfe</h2>
           </div>
-          <%#= image_tag 'icons/wolf-with-moon-64.ico', class: 'h-10 md:h-12' %>
         <% end %>
       <% end %>
     </div>
 
-    <div class="hidden lg:flex items-center space-x-4 text-md lg:space-x-8">
-      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
-        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: root_path(anchor: 'about'), delay: '300ms' } %>
-      <% end %>
-      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
-        <%= render 'layouts/nav/header', { label: '02.', title: 'Projects', route: root_path(anchor: 'projects'), delay: '400ms' } %>
-      <% end %>
-      <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
-        <%= render 'layouts/nav/header', { label: '03.', title: 'Hire', route: root_path(anchor: 'hire-me'), delay: '500ms' } %>
-      <% end %>
-      <%= link_to 'Contact', contact_path, class: "btn btn-tertiary #{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
-    </div>
 
-    <div class="flex space-x-4">
+
+    <div class="flex space-x-4 lg:space-x-12">
+      <div class="hidden lg:flex items-center space-x-4 text-md lg:space-x-8">
+        <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
+          <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: root_path(anchor: 'about'), delay: '300ms' } %>
+        <% end %>
+        <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
+          <%= render 'layouts/nav/header', { label: '02.', title: 'Projects', route: root_path(anchor: 'projects'), delay: '400ms' } %>
+        <% end %>
+        <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
+          <%= render 'layouts/nav/header', { label: '03.', title: 'Hire', route: root_path(anchor: 'hire-me'), delay: '500ms' } %>
+        <% end %>
+        <%= link_to 'Contact', contact_path, class: "btn btn-tertiary #{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--nav-load-time) + 600ms);"%>
+      </div>
       <button title="Toggle color scheme" data-action="click->nav#toggleTheme" type=button>
         <%= render 'layouts/nav/feather_moon' %>
         <%= render 'layouts/nav/feather_sun' %>
