@@ -16,8 +16,15 @@ export default class extends Controller {
 
       anchor.addEventListener('click', e => {
         let target = anchor.getAttribute('href')
-        console.log(target)
-        if (!target.includes("#") && !target.includes(".com")) {
+        let currentPageRoot = true
+
+        if (this.hasPageTransitionTarget) {
+          currentPageRoot = (this.pageTransitionTarget.dataset.root === 'true')
+        }
+
+        // Do not transition if the link is an anchor link to the root page and we are not in the root page
+        // TODO: Make this work so that it doesn't transition if the anchor link is for the current page
+        if (!target.includes("#") && !target.includes(".com") && !currentPageRoot) {
           e.preventDefault();
 
           this.pageTransitionTarget.classList.add('is-active')
