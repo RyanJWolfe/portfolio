@@ -83,9 +83,9 @@
     }
 
     .theme-dark {
-        --color-text-based: 225, 225, 225; /* off-white */
+        --color-text-based: 247, 257, 255; /* off-white */
         --color-text-primary: 192, 132, 252; /* purple-400 */
-        --color-text-muted: 136, 153, 166;
+        --color-text-muted: 170, 170, 180;
         --color-text-based-hover: 255, 255, 255;
         --color-text-inverted: 18, 18, 18;
         --color-bg: 17, 24, 39; /* dark color */
