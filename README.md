@@ -2,6 +2,8 @@
 
 Software Engineer portfolio web app using Rails 7 and TailwindCSS 
 
+See this repo at: https://ryanjwolfe.com
+
 
 * Ruby version
   * 3.1.2
@@ -14,4 +16,4 @@ Software Engineer portfolio web app using Rails 7 and TailwindCSS
   ```
 
 * Deployment instructions
-  * TBD
+  * Deployed using Heroku (hobby tier)
