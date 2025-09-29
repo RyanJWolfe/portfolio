@@ -16,7 +16,7 @@
 
     <div class="flex space-x-4 lg:space-x-12">
       <div class="hidden lg:flex items-center space-x-4 text-md lg:space-x-8">
-        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: root_path(anchor: 'about'), delay: '100ms' } %>
+        <%= render 'layouts/nav/header', { label: '01.', title: 'About', route: about_path, delay: '100ms' } %>
         <%= render 'layouts/nav/header', { label: '02.', title: 'Projects', route: root_path(anchor: 'projects'), delay: '200ms' } %>
         <%= render 'layouts/nav/header', { label: '03.', title: 'Hire', route: root_path(anchor: 'hire-me'), delay: '300ms' } %>
         <%= link_to 'Contact', contact_path, class: "btn btn-tertiary #{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--nav-load-time));"%>
