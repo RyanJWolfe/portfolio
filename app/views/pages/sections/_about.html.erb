@@ -1,34 +1,42 @@
 <div class="w-full h-full justify-between items-center">
-  <div class="">
-    <%= render 'pages/sections/section_header', { label: "01", title: "About Me" } %>
-    <div class="flex flex-col md:flex-row gap-10">
-      <div class="w-full min-w-72 md:min-w-80 lg:min-w-96">
-        <%= render 'pages/sections/about_me_picture' %>
+  <div class="h-full flex items-center justify-center">
+    <div>
+      <div class="md:hidden">
+        <%= render 'pages/sections/section_header', { label: "01", title: "About Me" } %>
       </div>
-      <div class="flex flex-col space-y-4 text-muted text-base lg:text-lg text-left">
-        <p class="">
-          Hello! My name is Ryan, I am a full-stack software engineer with a passion for learning and solving problems.
-        </p>
-        <p class="">
-          I began my career doing low-level programming with
-          <span>
-            <%= link_to 'embedded', 'https://www.gpssource.com/collections/apnt/products/ed3-global-positioning-system-developer-kit', target: '_blank', class: "accent-text" %>
-          </span>
-          <span>
-            <%= link_to 'systems', 'https://gdmissionsystems.com/products/cross-domain-solutions/tacds-tactical-cross-domain-solution', target: '_blank', class: "accent-text" %>
-            .
-          </span>
-          After a few years I transitioned to web development, where I found an interest in building digital
-          experiences.
-        </p>
-        <p class="" data-mobile-menu-target="about">
-          Currently, I am a senior software development engineer at
-          <span>
-            <%= link_to 'StrongMind', 'https://www.strongmind.com/', target: '_blank', class: "accent-text" %>.
-          </span>
-          where I focus on building innovative solutions to educational challenges.
-          I also do freelance work, where I help people bring their ideas to life on the web.
-        </p>
+      <div class="flex flex-col md:flex-row gap-10">
+        <div class="w-full min-w-72 md:min-w-80 lg:min-w-96">
+          <%= render 'pages/sections/about_me_picture' %>
+        </div>
+        <div class="flex flex-col gap-y-4 text-muted text-base lg:text-lg text-left">
+          <div class="hidden md:block">
+            <%= render 'pages/sections/section_header', { label: "01", title: "About Me" } %>
+          </div>
+          <p class="">
+            Hello! My name is Ryan, I am a full-stack software engineer with a passion for learning and solving
+            problems.
+          </p>
+          <p class="">
+            I began my career doing low-level programming with
+            <span>
+              <%= link_to 'embedded', 'https://www.gpssource.com/collections/apnt/products/ed3-global-positioning-system-developer-kit', target: '_blank', class: "accent-text" %>
+            </span>
+            <span>
+              <%= link_to 'systems', 'https://gdmissionsystems.com/products/cross-domain-solutions/tacds-tactical-cross-domain-solution', target: '_blank', class: "accent-text" %>
+              .
+            </span>
+            After a few years I transitioned to web development, where I found an interest in building digital
+            experiences.
+          </p>
+          <p class="" data-mobile-menu-target="about">
+            Currently, I am a senior software development engineer at
+            <span>
+              <%= link_to 'StrongMind', 'https://www.strongmind.com/', target: '_blank', class: "accent-text" %>.
+            </span>
+            where I focus on building innovative solutions to educational challenges.
+            I also do freelance work, where I help people bring their ideas to life on the web.
+          </p>
+        </div>
       </div>
     </div>
   </div>
