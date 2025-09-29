@@ -5,27 +5,23 @@
             space-y-8 transition-[right] ease-in-out duration-500" id="mobile-menu">
   <ul class="w-full tracking-wider text-right text-lg md:text-xl pt-20 sm:pt-32 pb-10 whitespace-nowrap font-poppins font-light">
     <li class="py-2 md:py-3 side-menu-fade-in" style="transition-delay: 100ms;">
-      <%= link_to 'Home', root_path, 'data-mobile-menu-target': 'homeLink', class: "inline-block w-full"%>
+      <%= link_to 'Home', root_path, class: "inline-block w-full"%>
     </li>
     <li class="py-2 md:py-3 side-menu-fade-in" style="transition-delay: 250ms;">
       <%= link_to 'About', root_path(anchor: 'about'),
-                  'data-mobile-menu-target': 'aboutLink',
                   class: "inline-block w-full"%>
     </li>
     <li class="py-2 md:py-3 side-menu-fade-in" style="transition-delay: 400ms;">
       <%= link_to 'Projects', root_path(anchor: 'projects'),
-                  'data-mobile-menu-target': 'projectsLink',
                   class: "inline-block w-full"%>
     </li>
     <li class="py-2 md:py-3 side-menu-fade-in" style="transition-delay: 550ms;">
       <%= link_to 'Hire', root_path(anchor: 'hire-me'),
-                 'data-mobile-menu-target': 'hireLink',
                               class: "inline-block w-full"%>
     </li>
     <li class="py-2 md:py-3 side-menu-fade-in" style="transition-delay: 700ms;">
       <%= link_to 'Contact', contact_path,
                   class: "#{'py-1.5 pr-3 border-r-4 border-primary text-primary font-semibold' if current_page? contact_path }",
-                  'data-mobile-menu-target': 'contactLink',
                               class: "inline-block w-full"%>
     </li>
   </ul>

@@ -7,14 +7,6 @@ export default class extends Controller {
                     "sideMenu", "contactLink", "projectsLink", "projects"]
 
   initialize() {
-    this.faders.forEach(fader => {
-      this.fadeInObserver().observe(fader)
-    })
-
-    this.scramblers.forEach(scrambler => {
-      this.scrambleObserver().observe(scrambler)
-    })
-
     window.onscroll = (e) => {
       let scrolledDown = this.oldScroll < this.scrollTop
       if (scrolledDown) {
@@ -22,7 +14,6 @@ export default class extends Controller {
       } else {
         this.showNavbar()
       }
-      this.toggleSidebar()
       this.oldScroll = this.scrollTop
     }
   }
@@ -51,46 +42,6 @@ export default class extends Controller {
     }
   }
 
-  fadeInObserver() {
-    // This will add the 'appear' class onto elements that have the 'fade-in' class once they are on screen
-
-    const appearOptions = {}
-    return new IntersectionObserver((entries, appearOnScroll) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return
-        } else {
-          if (entry.target.classList.contains('scramble')) {
-            let textScramble = new TextScramble(entry.target)
-            textScramble.setText(entry.target.innerText).then(() => {})
-          }
-          setTimeout(() => {
-            entry.target.classList.add('appear')
-            appearOnScroll.unobserve(entry.target)
-          }, 100)
-        }
-      })
-    }, appearOptions)
-  }
-
-  scrambleObserver() {
-    const appearOptions = {}
-    return new IntersectionObserver((entries, appearOnScroll) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return
-        } else {
-          if (entry.target.classList.contains('fade-in'))
-            return
-          let textScramble = new TextScramble(entry.target)
-          textScramble.setText(entry.target.innerText).then(() => {})
-          entry.target.classList.add('start-scramble')
-          appearOnScroll.unobserve(entry.target)
-        }
-      })
-    }, appearOptions)
-  }
-
   showNavbar() {
     this.addOrRemoveShadow()
     this.headerTarget.style.top = "0"
@@ -116,35 +67,6 @@ export default class extends Controller {
       this.navbarTarget.classList.add("py-3", "md:py-6")
       this.navbarTarget.classList.remove("py-4", "md:py-8")
     }
-  }
-
-  toggleSidebar() {
-    if (this.contactInfoInView)
-      this.hideSidebar()
-    else
-      this.showSidebar()
-  }
-
-  hideSidebar() {
-    this.sidebarTarget.style.bottom = "-300px"
-  }
-
-  showSidebar() {
-    this.sidebarTarget.style.bottom = "0"
-  }
-
-  get contactInfoInView() {
-    if (this.hasContactInfoTarget)
-      return isScrolledIntoView(this.contactInfoTarget)
-    return false
-  }
-
-  get faders() {
-    return document.querySelectorAll(".fade-in")
-  }
-
-  get scramblers() {
-    return document.querySelectorAll(".scramble")
   }
 
   get scrollTop() {
