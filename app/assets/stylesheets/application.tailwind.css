@@ -66,7 +66,7 @@
         --color-bg-surface-accent: 200, 200, 200;
         --color-page-transition: 200, 200, 200;
         /* End theme vars */
-        --page-transition-duration: 500ms;
+        --page-transition-duration: 0ms;
         --nav-load-delay: var(--page-transition-duration);
         --nav-load-time: 500ms;
         --nav-link-load-time: 400ms;
