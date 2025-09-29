@@ -1,25 +1,27 @@
-import { Controller } from "@hotwired/stimulus"
-import TextScramble from "helpers/text_scramble"
-import { isScrolledIntoView } from "helpers/scrolled_into_view"
+import {Controller} from "@hotwired/stimulus"
+
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["header", "sidebar", "contactInfo", "menuBtn", "navbar",
-                    "sideMenu", "contactLink", "projectsLink", "projects"]
-
-  initialize() {
-    window.onscroll = (e) => {
-      let scrolledDown = this.oldScroll < this.scrollTop
-      if (scrolledDown) {
-        this.hideNavbar()
-      } else {
-        this.showNavbar()
-      }
-      this.oldScroll = this.scrollTop
-    }
-  }
+  static targets = ["header", "menuBtn", "navbar"]
 
   connect() {
-    this.addOrRemoveShadow();
+    this.addOrRemoveShadow()
+    this.scrollListener = this.onScroll.bind(this)
+    window.addEventListener('scroll', this.scrollListener)
+  }
+
+  disconnect() {
+    window.removeEventListener('scroll', this.scrollListener)
+  }
+
+  onScroll() {
+    let scrolledDown = this.oldScroll < this.scrollTop
+    if (scrolledDown) {
+      this.hideNavbar()
+    } else {
+      this.showNavbar()
+    }
+    this.oldScroll = this.scrollTop
   }
 
   toggleTheme() {
@@ -61,8 +63,7 @@ export default class extends Controller {
       this.headerTarget.classList.remove("shadow-lg")
       this.navbarTarget.classList.remove("py-3", "md:py-6")
       this.navbarTarget.classList.add("py-4", "md:py-8")
-    }
-    else {
+    } else {
       this.headerTarget.classList.add("shadow-lg")
       this.navbarTarget.classList.add("py-3", "md:py-6")
       this.navbarTarget.classList.remove("py-4", "md:py-8")

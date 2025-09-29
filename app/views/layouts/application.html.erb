@@ -29,7 +29,7 @@
     </header>
     <%= render 'layouts/nav/sidebar' if current_page?(root_path) %>
     <main data-action="keyup@window->nav#onKeyup click->mobile-menu#hide"
-          class="relative w-full text-based overflow-auto background-transition">
+          class="relative w-full text-based background-transition">
       <%= yield %>
     </main>
   </body>
