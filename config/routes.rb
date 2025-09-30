@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "articles#new"
 
   # Contact form routes, not currently in use
-  # get "/contact", to: "contacts#new"
-  # get "/contact/success", to: "contacts#index"
-  # post "/contact", to: "contacts#create"
+  get "/contact", to: "contacts#new"
+  get "/contact/success", to: "contacts#index"
+  post "/contact", to: "contacts#create"
 end
