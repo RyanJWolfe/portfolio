@@ -1,10 +1,8 @@
 <%= link_to route, class: "#{'animate-nav-link-load opacity-0' if current_page? root_path}", style: "animation-delay: calc(var(--page-transition-duration) + #{delay});" do %>
-  <%= render 'shared/button_with_translate', { translate: "hover:-translate-y-0.5" } do %>
-    <div class="after:bg-primary hover-fade-in hover:text-primary">
-        <div class="flex space-x-1 items-baseline xl:text-lg">
-          <code class="text-primary font-medium"><%= label %></code>
-          <span class="font-poppins font-medium"><%= title %></span>
-        </div>
+  <div class="after:bg-primary hover-underline hover:text-primary">
+    <div class="flex space-x-1 items-baseline xl:text-lg">
+      <code class="text-primary font-medium"><%= label %></code>
+      <span class="font-poppins font-medium"><%= title %></span>
     </div>
-  <% end %>
+  </div>
 <% end %>
