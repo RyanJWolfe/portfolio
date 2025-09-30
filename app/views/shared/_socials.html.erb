@@ -1,5 +1,5 @@
-<%# locals: ( size: 40 ) -%>
+<%# locals: ( size: "w-8 h-8" ) -%>
 
 <% social_links.each do |link| %>
-  <%= render "shared/icon_link", link: link[:url], icon_name: link[:name] %>
+  <%= render "shared/icon_link", link: link[:url], icon_name: link[:name], size: %>
 <% end %>
