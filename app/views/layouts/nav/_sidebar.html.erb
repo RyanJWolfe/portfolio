@@ -1,16 +1,9 @@
 <div class="visible fixed py-6 sm:py-0 sm:px-6 md:px-12 xl:px-16 right-0 bottom-0 bg-transparent z-30 transition-all duration-300 ease-in-out">
   <div class="flex gap-x-4 sm:gap-x-0 sm:flex-col sm:gap-y-6">
-    <%= render 'shared/button_with_translate', { translate: "hover:translate-x-1" } do %>
-      <%= render 'shared/github_link' %>
-    <% end %>
-    <%= render 'shared/button_with_translate', { translate: "hover:translate-x-1" } do %>
-      <%= render 'shared/linkedin_link' %>
-    <% end %>
-    <%= render 'shared/button_with_translate', { translate: "hover:translate-x-1" } do %>
-      <%= render 'shared/instagram_link' %>
-    <% end %>
-    <%= render 'shared/button_with_translate', { translate: "hover:translate-x-1" } do %>
-      <%= render 'shared/mail_link' %>
+    <% social_links.each do |link| %>
+      <%= render 'shared/button_with_translate', { translate: "hover:translate-x-1" } do %>
+        <%= render "shared/icon_link", link: link[:url], icon_name: link[:name] %>
+      <% end %>
     <% end %>
     <div class="sm:hidden mt-3 border-t border-gray-500 w-16"></div>
 
