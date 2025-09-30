@@ -76,3 +76,4 @@ group :test do
 end
 
 gem "mail_form"
+gem "inline_svg"
