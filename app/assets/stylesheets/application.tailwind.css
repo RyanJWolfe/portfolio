@@ -124,7 +124,7 @@
         @apply relative container mx-auto px-8 sm:px-12 h-screen flex items-center max-w-5xl
     }
     .page {
-        @apply container mx-auto px-5 px-8 sm:px-12 h-screen flex flex-col items-center justify-center max-w-5xl mt-24 md:mt-32
+        @apply container mx-auto px-5 px-8 sm:px-12 flex flex-col items-center justify-center max-w-5xl mt-24 md:mt-40
     }
     .contact-section {
         @apply section h-fit
