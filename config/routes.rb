@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#new"
-  get "/contact", to: "contacts#new"
-  get "/contact/success", to: "contacts#index"
-  post "/contact", to: "contacts#create"
+
+  # Contact form routes, not currently in use
+  # get "/contact", to: "contacts#new"
+  # get "/contact/success", to: "contacts#index"
+  # post "/contact", to: "contacts#create"
 end

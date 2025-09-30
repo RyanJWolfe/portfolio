@@ -7,4 +7,8 @@ module LinksHelper
       { name: "mail", url: "mailto:me@ryanjwolfe.com" }
     ]
   end
+
+  def contact_path
+    about_path(anchor: "contact")
+  end
 end
