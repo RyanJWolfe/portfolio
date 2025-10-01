@@ -2,9 +2,7 @@
   <%= render 'pages/sections/section_header', { label: "02", title: "Blog" } %>
 
   <div id="blog-posts">
-    <%= @posts.each do |post| %>
-        <%= pp post %>
-    <% end %>
+    <%= render partial: "post", collection: @posts, as: :post %>
   </div>
 
 </div>
