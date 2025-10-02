@@ -1,7 +1,7 @@
 ---
 date: 2024-04-03
 title: Improving Efficiency for Software Developers
-slug: improving-efficiency
+slug: improving_efficiency
 description: Non-coding techniques to improve efficiency in computer programming
 tags: 
   - productivity
