@@ -1,5 +1,5 @@
 <%= link_to blog_post_path(post.slug) do %>
-  <div class="flex flex-col sm:flex-row sm:gap-x-4">
+  <div class="flex flex-col sm:flex-row sm:gap-x-4 lg:text-lg">
     <div class="text-muted whitespace-nowrap"><%= post.date.strftime("%b %d, %Y") %></div>
     <h3><%= post.title %></h3>
   </div>
