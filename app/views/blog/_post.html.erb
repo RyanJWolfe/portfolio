@@ -1,9 +1,6 @@
-<div>
-  <%= link_to blog_post_path(post.slug) do %>
+<%= link_to blog_post_path(post.slug) do %>
+  <div class="flex flex-col sm:flex-row sm:gap-x-4">
+    <div class="text-muted whitespace-nowrap"><%= post.date.strftime("%b %d, %Y") %></div>
     <h3><%= post.title %></h3>
-    <p class="text-sm text-muted"><%= post.date.strftime("%B %d, %Y") %></p>
-    <div>
-      <%= post.description %>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>

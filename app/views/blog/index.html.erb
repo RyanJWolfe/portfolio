@@ -1,7 +1,7 @@
 <div id="blog-index" class="page pb-8">
   <%= render 'pages/sections/section_header', { label: "02", title: "Blog" } %>
 
-  <div id="blog-posts">
+  <div id="blog-posts" class="w-full flex flex-col gap-y-4">
     <%= render partial: "post", collection: @posts, as: :post %>
   </div>
 
