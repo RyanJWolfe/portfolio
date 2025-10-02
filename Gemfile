@@ -79,3 +79,5 @@ gem "mail_form"
 gem "inline_svg"
 
 gem "front_matter_parser", "~> 1.0"
+
+gem "redcarpet"
