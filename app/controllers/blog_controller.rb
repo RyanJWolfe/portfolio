@@ -5,6 +5,15 @@ class BlogController < ApplicationController
   end
 
   def show
+    slug = params[:slug]
+    file_path = Post::POSTS_DIR.join("#{slug}.md")
+
+    render plain: "Post not found", status: :not_found and return unless File.exist?(file_path)
+
+
+    @post = Post.from_file(file_path)
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @content = renderer.render(@post.content)
   end
 
   private
