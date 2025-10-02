@@ -5,7 +5,7 @@ slug: hello-world-2
 description: My second blog post
 tags: 
   - introduction
-  - secpmd-post
+  - second post
 author: Jane Doe
 ---
 

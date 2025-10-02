@@ -6,7 +6,7 @@ description: Non-coding techniques to improve efficiency in computer programming
 tags: 
   - productivity
   - efficiency
-  - software-development
+  - software development
 author: Ryan Wolfe
 ---
 
