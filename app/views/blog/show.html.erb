@@ -3,5 +3,18 @@
     <div class="text-muted"><%= @post.date.strftime("%B %d, %Y") %></div>
 
     <%== @content %>
+
+    <hr />
+
+    <div class="text-muted -mt-4 not-prose">
+      <%= link_to blog_path, class: "hover:underline flex items-center gap-x-2"  do %>
+        <%= inline_svg("icons/chevron-left.svg") %> Back to all posts
+      <% end %>
+      <div class="flex items-center justify-end w-full gap-x-6 mt-8">
+        <%= render "shared/socials", size: "w-5 h-5" %>
+      </div>
+    </div>
   </div>
+
+
 </div>
