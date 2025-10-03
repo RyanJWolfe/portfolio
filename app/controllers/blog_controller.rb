@@ -12,7 +12,9 @@ class BlogController < ApplicationController
 
 
     @post = Post.from_file(file_path)
-    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(with_toc_data: true), fenced_code_blocks: true)
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(with_toc_data: true),
+                                       fenced_code_blocks: true,
+                                       autolink: true)
     @content = renderer.render(@post.content)
   end
 
