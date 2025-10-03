@@ -1,5 +1,7 @@
 <div id="blog-post" class="page pb-8">
   <div class="prose dark:prose-invert w-full">
+    <div class="text-muted"><%= @post.date.strftime("%B %d, %Y") %></div>
+
     <%== @content %>
   </div>
 </div>
