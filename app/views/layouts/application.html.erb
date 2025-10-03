@@ -20,17 +20,19 @@
     <%= favicon_link_tag 'icons/wolf.ico' %>
   </head>
 
-  <body class="bg-base" data-controller="nav mobile-menu">
-  <header id="navbar"
-            class="top-0 fixed z-50 w-full bg-base/90 backdrop-blur "
+  <body class="bg-base min-h-screen flex flex-col" data-controller="nav mobile-menu">
+    <header id="navbar"
+            class="top-0 fixed z-50 w-full bg-base/90 backdrop-blur"
             style="transition: top 0.5s ease, box-shadow 0.5s ease-in-out"
             data-nav-target="header">
       <%= render 'layouts/nav/navbar' %>
     </header>
     <%= render 'layouts/nav/sidebar' if current_page?(root_path) %>
     <main data-action="keyup@window->nav#onKeyup click->mobile-menu#hide"
-          class="relative w-full text-based background-transition">
+          class="relative w-full text-based background-transition flex-1">
       <%= yield %>
     </main>
+
+    <%= render "layouts/nav/footer" %>
   </body>
 </html>
