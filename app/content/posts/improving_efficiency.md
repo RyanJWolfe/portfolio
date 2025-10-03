@@ -21,7 +21,7 @@ In this document, we'll explore various techniques to improve efficiency in comp
 ## Table of Contents
 
 1. [Baseline Skills](#1-baseline-skills)
-2. [Command Line (MacOS/Linux)](#2-command-line-macoslinux)
+2. [Command Line (MacOS/Linux)](#2-command-line-macos-linux)
 3. [Keyboard Shortcuts](#3-keyboard-shortcuts)
 4. [IDE Shortcuts](#4-ide-shortcuts)
 5. [Additional Tools and Resources (MacOS)](#5-additional-tools-and-resources-macos)
