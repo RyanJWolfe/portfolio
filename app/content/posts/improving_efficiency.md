@@ -56,20 +56,20 @@ To improve your typing speed, you will probably find that with just 5-10 minutes
 ### Exercise 🧪
 As an exercise, record your current typing speed (WPM) and then do another test after a week of practice.  How much did you improve?
 
-**Current Typing Speed**: XX WPM\
-**1 Week Later**: XX WPM\
+**Current Typing Speed**: XX WPM <br>
+**1 Week Later**: XX WPM <br>
 **1 Month Later**: XX WPM
 
 
 ## 2. Command Line (MacOS/Linux)
 
-Command line proficiency is a valuable skill for software engineers or any heavy computer user.\
+Command line proficiency is a valuable skill for software engineers or any heavy computer user.<br>
 The command line interface (CLI) provides a powerful and efficient way to interact with your computer and perform a wide range of tasks.
 
 
 ### Basic Commands
 
-If you are relatively new to the command line, consider taking an online course or tutorial to get up to speed.\
+If you are relatively new to the command line, consider taking an online course or tutorial to get up to speed.<br>
 Here is a blog post that covers some of the basic commands and functionality: https://www.git-tower.com/blog/command-line-cheat-sheet/
 
 #### Command Line Applied
@@ -273,7 +273,7 @@ At the very least, learn the shortcuts for common tasks like:
 
 As IDEs may have different shortcuts, I won't list them here, but here are some resources to help you find the shortcuts for your specific IDE:
 
-[JetBrains](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)\
+[JetBrains](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)<br>
 [Visual Studio Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 Both IDEs have plugins that can help you learn and practice shortcuts.  For example, the [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) plugin for IntelliJ IDEA will show you the keyboard shortcuts you could have used for actions you perform with the mouse.
