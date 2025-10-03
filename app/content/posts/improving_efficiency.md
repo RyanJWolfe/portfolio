@@ -117,12 +117,11 @@ Creating aliases for commonly used commands can save time and reduce typing. Ali
 If you are using zsh, you can install the git plugin (mentioned above) to use aliases like `gst` for `git status` or `gl` for `git pull`.  (Note: you can also just create your own git aliases)
 
 Custom Alias Example:
+
 ```bash
-alias "c=pbcopy"
-```
-This allows you to copy the output of a command to the clipboard by piping it to `c`.
-```bash
-cat file.txt | c # copies the contents of file.txt to the clipboard
+# pbcopy copies a command's output to the clipboard
+alias "c=pbcopy" # create an alias 'c' for pbcopy
+cat file.txt | c # copies the contents of file.txt to the clipboard using the alias
 ```
 
 ### Vim
