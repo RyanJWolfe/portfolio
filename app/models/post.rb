@@ -11,27 +11,34 @@ class Post
   end
 
   def title
-    @front_matter[:title]
+    front_matter[:title]
   end
 
   def date
-    @front_matter[:date]
+    front_matter[:date]
   end
 
   def slug
-    @front_matter[:slug]
+    front_matter[:slug]
   end
 
   def description
-    @front_matter[:description]
+    front_matter[:description]
   end
 
   def author
-    @front_matter[:author]
+    front_matter[:author]
   end
 
   def tags
-    @front_matter[:tags]
+    front_matter[:tags]
+  end
+
+  def html_content
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(with_toc_data: true),
+                                       fenced_code_blocks: true,
+                                       autolink: true)
+    renderer.render(content)
   end
 
   def self.from_file(file_path)
