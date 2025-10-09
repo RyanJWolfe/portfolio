@@ -1,5 +1,7 @@
 <div id="blog-index" class="page">
-  <%= render 'pages/sections/section_header', { label: "02", title: "Blog" } %>
+  <%= render 'pages/sections/section_header', { label: "02", title: "Blog", bottom_margin: false } %>
+
+  <p class="mt-4 mb-6 md:mb-8">A collection of thoughts, lessons, and ideas — from software development and technology to food, travel, and everything in between.</p>
 
   <div id="blog-posts" class="w-full flex flex-col gap-y-4">
     <%= render partial: "post", collection: @posts, as: :post %>
